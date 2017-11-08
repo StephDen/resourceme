@@ -10,7 +10,7 @@
   </head>
   <body>
     <h1> AESTHETIC EDWARDO</h1>
-    <a type="button" href="sqlconn.php" name="clickme">
+    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
