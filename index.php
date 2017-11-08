@@ -1,5 +1,6 @@
 <?php
-  require('php/getname.php');
+  require('php/dbconn.php');
+  $name = 'edwardo';
 ?>
 <html lang="en">
   <head>
