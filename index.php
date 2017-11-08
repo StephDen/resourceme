@@ -13,6 +13,7 @@
   $time = time()+60; //store cookie for one year
   setcookie('testencrypt', encryptCookie($row['test']),$time,'/');
   $decookie = decryptCookie($_COOKIE['cookie_name']);
+  $thecookie = $_COOKIE['testencrypt']
 ?>
 <html lang="en">
   <head>
@@ -28,8 +29,8 @@
 
     <h1>AESTHETIC <small class="text-muted"><?php echo $row?> </small></h1>
     <div class="alert alert-primary" role="alert">
-      <h1>encryptedCookie: <?php echo $_COOKIE['testencrypt'];?></h1>
-      <h1>decryptedCookie: <?php echo $decookie></h1>
+      <h1>encryptedCookie: <?php echo $thecookie?></h1>
+      <h1>decryptedCookie: <?php echo $decookie;></h1>
     </div>
 
     <!-- Optional JavaScript -->
