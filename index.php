@@ -1,7 +1,7 @@
 <?php
   //connecting to db
   require('php/dbconn.php');
-  require('php/cookiefuncs.php')
+  require('php/cookiefuncs.php');
   $name = 'edwardo';
   //collecting data from db
   $tsql= "SELECT * FROM test";
