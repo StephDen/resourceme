@@ -10,7 +10,7 @@
   $row = sqlsrv_fetch_array($getResults);
   $row = $row['test'];
   $time = time()+60*60; //store cookie for one year
-  setcookie('testencrypt', encryptCookie($row),$time,'/');
+  setcookie('testencrypt', encryptCookie($row),$time);
   $decookie = decryptCookie($_COOKIE['testencrypt']);
   $thecookie = $_COOKIE['testencrypt'];
 ?>
