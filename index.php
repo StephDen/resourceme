@@ -1,5 +1,5 @@
 <?php
-  require('getname.php');
+  require('php/getname.php');
 ?>
 <html lang="en">
   <head>
