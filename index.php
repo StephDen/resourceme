@@ -26,10 +26,10 @@
   </head>
   <body>
 
-    <h1>AESTHETIC <small class="text-muted"><?php echo $row['test']?> </small></h1>
+    <h1>AESTHETIC <small class="text-muted"><?php echo $row['test'];?> </small></h1>
     <div class="alert alert-primary" role="alert">
       <h1>encryptedCookie: <?php echo $thecookie;?></h1>
-      <h1>decryptedCookie: <?php echo $decookie;></h1>
+      <h1>decryptedCookie: <?php echo $decookie;?></h1>
     </div>
 
     <!-- Optional JavaScript -->
