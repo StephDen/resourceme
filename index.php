@@ -12,7 +12,7 @@
   $row = $row['test'];
   $time = time()+60; //store cookie for one year
   setcookie('testencrypt', encryptCookie($row['test']),$time,'/');
-  $decookie = decryptCookie($_COOKIE['cookie_name']);
+  $decookie = decryptCookie($_COOKIE['testencrypt']);
   $thecookie = $_COOKIE['testencrypt']
 ?>
 <html lang="en">
