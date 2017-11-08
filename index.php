@@ -2,14 +2,13 @@
   //connecting to db
   require('php/dbconn.php');
   require('php/cookiefuncs.php');
-  $name = 'edwardo';
   //collecting data from db
   $tsql= "SELECT * FROM test";
   $getResults= sqlsrv_query($conn, $tsql);
   if ($getResults == FALSE)
     echo (sqlsrv_errors());
   $row = sqlsrv_fetch_array($getResults);
-  $time = time()+60; //store cookie for one year
+  $time = time()+60*60; //store cookie for one year
   setcookie('testencrypt', encryptCookie($row['test']),$time,'/');
   $decookie = decryptCookie($_COOKIE['testencrypt']);
   $thecookie = $_COOKIE['testencrypt'];
