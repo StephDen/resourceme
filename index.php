@@ -1,6 +1,7 @@
 <?php
   //connecting to db
   require('php/dbconn.php');
+  require('php/cookiefuncs.php')
   $name = 'edwardo';
   //collecting data from db
   $tsql= "SELECT * FROM test";
@@ -9,6 +10,9 @@
     echo (sqlsrv_errors());
   $row = sqlsrv_fetch_array($getResults);
   $row = $row['test'];
+  $time = time()+60; //store cookie for one year
+  setcookie('testencrypt', encryptCookie($row['test']),$time,'/');
+  $decookie = decryptCookie($_COOKIE['cookie_name']);
 ?>
 <html lang="en">
   <head>
@@ -21,10 +25,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   </head>
   <body>
-      
+
     <h1>AESTHETIC <small class="text-muted"><?php echo $row?> </small></h1>
     <div class="alert alert-primary" role="alert">
-        Hey, how're you doing?
+      <h1>encryptedCookie: <?php echo $_COOKIE['testencrypt'];?></h1>
+      <h1>decryptedCookie: <?php echo $decookie></h1>
     </div>
 
     <!-- Optional JavaScript -->
