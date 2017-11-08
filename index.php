@@ -1,6 +1,12 @@
 <?php
   require('php/dbconn.php');
   $name = 'edwardo';
+  $tsql= "SELECT * FROM test";
+  $getResults= sqlsrv_query($conn, $tsql);
+  if ($getResults == FALSE)
+    echo (sqlsrv_errors());
+  $row = sqlsrv_fetch_array($getResults);
+  $row = $row['test'];
 ?>
 <html lang="en">
   <head>
@@ -14,7 +20,7 @@
   </head>
   <body>
       
-    <h1>AESTHETIC <small class="text-muted"><?php echo $name?> </small></h1>
+    <h1>AESTHETIC <small class="text-muted"><?php echo $row?> </small></h1>
     <div class="alert alert-primary" role="alert">
         Hey, how're you doing?
     </div>
