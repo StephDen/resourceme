@@ -1,3 +1,6 @@
+<?php
+  require('getname.php');
+?>
 <html lang="en">
   <head>
     <title>Hello, world!</title>
@@ -10,7 +13,7 @@
   </head>
   <body>
       
-    <h1>AESTHETIC <small class="text-muted">TEXT</small></h1>
+    <h1>AESTHETIC <small class="text-muted"><?php echo $name?> </small></h1>
     <div class="alert alert-primary" role="alert">
         Hey, how're you doing?
     </div>
