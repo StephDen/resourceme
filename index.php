@@ -1,6 +1,8 @@
 <?php
+  //connecting to db
   require('php/dbconn.php');
   $name = 'edwardo';
+  //collecting data from db
   $tsql= "SELECT * FROM test";
   $getResults= sqlsrv_query($conn, $tsql);
   if ($getResults == FALSE)
@@ -10,7 +12,7 @@
 ?>
 <html lang="en">
   <head>
-    <title>Hello, world!</title>
+    <title>AESTHETIC EDWARDO</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
