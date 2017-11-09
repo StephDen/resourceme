@@ -48,5 +48,8 @@ function setSafeCookie($cookiename,$salt, $string){
   $time = time()+60*60;
   setcookie($cookiename, encrypt_string_and_encode($salt, $string),$time,'/');
 }
-
+//getting a safe cookie
+function getSafeCookie($salt,$cookiename){
+	return decrypt_string_and_decode($salt,$_COOKIE[$cookiename]);
+}
 ?>
