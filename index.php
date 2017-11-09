@@ -11,9 +11,10 @@
   $row = $row['test'];
   $cookiename = 'edwardo';
   $cookiekey = 'AESTHETIC';
+  
   setSafeCookie($cookiename,$cookiekey,$row);
-  $decookie = decrypt_string_and_decode($cookiekey, $cookiename);
-  $thecookie = $_COOKIE[$cookiename];
+  $thecookie = encrypt_string_and_encode($cookiekey, $row);
+  $decookie = decrypt_string_and_decode($cookiekey, $thecookie);
 ?>
 <html lang="en">
   <head>
@@ -29,8 +30,8 @@
 
     <h1>AESTHETIC <small class="text-muted"><?php echo $row;?> </small></h1>
     <div class="alert alert-primary" role="alert">
-      <h1>encryptedCookie: <?php echo $thecookie?></h1>
-      <h1>decryptedCookie: <?php echo $decookie?></h1>
+      <p>encryptedCookie: <?php echo $thecookie;?></p>
+      <p>decryptedCookie: <?php echo $decookie;?></p>
     </div>
 
     <!-- Optional JavaScript -->
