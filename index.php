@@ -8,13 +8,13 @@
   if ($getResults == FALSE)
     echo (sqlsrv_errors());
   $row = sqlsrv_fetch_array($getResults);
-  $row = $row['test'];
+  $str = $row['test'];
   $cookiename = 'edwardo';
-  $cookiekey = 'AESTHETIC';
+  $my_salt = 'SomeRandomString-hY5K92AzVnMYyT7';
   
-  setSafeCookie($cookiename,$cookiekey,$row);
-  $thecookie = encrypt_string_and_encode($cookiekey, $row);
-  $decookie = decrypt_string_and_decode($cookiekey, $thecookie);
+  setSafeCookie($cookiename,$my_salt,$str);
+  $encrypted_string = $_COOKIE[$cookiename];
+  $decrypted_string = decrypt_string_and_decode($my_salt, $encrypted_string);
 ?>
 <html lang="en">
   <head>
@@ -28,10 +28,11 @@
   </head>
   <body>
 
-    <h1>AESTHETIC <small class="text-muted"><?php echo $row;?> </small></h1>
+    <h1>AESTHETIC <small class="text-muted"><?php echo $str;?> </small></h1>
     <div class="alert alert-primary" role="alert">
-      <p>encryptedCookie: <?php echo $thecookie;?></p>
-      <p>decryptedCookie: <?php echo $decookie;?></p>
+      <p><?php echo "Encrypted Cookie:".$encrypted_string."<br/>";
+        echo "Decrypted Cookie:".$decrypted_string;?>
+      </p>
     </div>
 
     <!-- Optional JavaScript -->
