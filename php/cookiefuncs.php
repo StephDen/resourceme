@@ -1,40 +1,49 @@
 <?php
 //DO NOT TOUCH IDK WHAT THIS DOES
-function setSafeCookie($name, $cookieData, $key)
-{
-    $nonce = \Sodium\randombytes_buf(\Sodium\CRYPTO_SECRETBOX_NONCEBYTES);
+function encrypt_string($salt, $string) {
+	// Configuration (must match decryption)
+	$cipher_type = MCRYPT_RIJNDAEL_256;
+	$cipher_mode = MCRYPT_MODE_CBC;
 
-    return setcookie(
-        $name,
-        base64_encode(
-            $nonce.
-            \Sodium\crypto_secretbox(
-                json_encode($cookieData),
-                $nonce,
-                $key
-            )
-        )
-    );
+	// Using initialization vector adds more security
+	$iv_size = mcrypt_get_iv_size($cipher_type, $cipher_mode);
+	$iv =  mcrypt_create_iv($iv_size, MCRYPT_RAND);
+
+	$encrypted_string = mcrypt_encrypt($cipher_type, $salt, $string, $cipher_mode, $iv);
+
+	// Return initialization vector + encrypted string
+	// We'll need the $iv when decoding.
+	return $iv . $encrypted_string;
 }
 
-function getSafeCookie($name, $key)
-{
-    if (!isset($_COOKIE[$name])) {
-        return array();
-    }
+function decrypt_string($salt, $iv_with_string) {
+	// Configuration (must match encryption)
+	$cipher_type = MCRYPT_RIJNDAEL_256;
+	$cipher_mode = MCRYPT_MODE_CBC;
 
-    $decoded = base64_decode($_COOKIE[$name]);
-    $nonce = mb_substr($decoded, 0, \Sodium\CRYPTO_SECRETBOX_NONCEBYTES, '8bit');
-    $ciphertext = mb_substr($decoded, \Sodium\CRYPTO_SECRETBOX_NONCEBYTES, null, '8bit');
+	// Extract the initialization vector from the encrypted string.
+	// The $iv comes before encrypted string and has fixed size.
+	$iv_size = mcrypt_get_iv_size($cipher_type, $cipher_mode);
+	$iv = substr($iv_with_string, 0, $iv_size);
+	$encrypted_string = substr($iv_with_string, $iv_size);
 
-    $decrypted = \Sodium\crypto_secretbox_open(
-        $ciphertext,
-        $nonce,
-        $key
-    );
-    if (empty($decrypted)) {
-        return array();
-    }
-    return json_decode($decrypted, true);
+	$string = mcrypt_decrypt($cipher_type, $salt, $encrypted_string, $cipher_mode, $iv);
+	return $string;
 }
+
+// Encode after encryption to ensure encrypted characters are savable
+function encrypt_string_and_encode($salt, $string) {
+	return base64_encode(encrypt_string($salt, $string));
+}
+
+// Decode before decryption
+function decrypt_string_and_decode($salt, $string) {
+	return decrypt_string($salt, base64_decode($string));
+}
+//setting a safe cookie
+function setSafeCookie($cookiename,$salt, $string){
+  $time = time()+60*60;
+  setcookie($cookiename, encrypt_string_and_encode($salt, $string),$time,'/');
+}
+
 ?>

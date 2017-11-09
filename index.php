@@ -11,8 +11,9 @@
   $row = $row['test'];
   $cookiename = 'edwardo';
   $cookiekey = 'AESTHETIC';
-  $thecookie = setSafeCookie($cookiename,$row,$cookiekey);
-  $decookie = getSafeCookie($cookiename, $cookiekey);
+  setSafeCookie($cookiename,$cookiekey,$row);
+  $decookie = decrypt_string_and_decode($cookiekey, $cookiename);
+  $thecookie = $_COOKIE[$cookiename];
 ?>
 <html lang="en">
   <head>
