@@ -20,6 +20,4 @@ function sqlqry($conn,$query_string){
   }
   return $getResults;
 }
-
-
 ?>
