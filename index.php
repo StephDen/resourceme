@@ -8,9 +8,7 @@
   $getResults= sqlqry($conn, $tsql);
     
   $tsql= "SELECT * FROM test WHERE test = ".$time1.";";
-  $getResults= sqlsrv_query($conn, $tsql);
-  if ($getResults == FALSE){
-    echo (sqlsrv_errors());}
+  $getResults= sqlqry($conn, $tsql);
 
   $row = sqlsrv_fetch_array($getResults);
   $str = $row['test'];
@@ -22,6 +20,9 @@
   $encrypted_string = $_COOKIE[$cookiename];
   $decrypted_string = getSafeCookie($my_salt, $cookiename);
 ?>
+
+
+<!--HTML SECTION-->
 <html lang="en">
   <head>
     <title>AESTHETIC EDWARDO</title>
