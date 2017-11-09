@@ -3,18 +3,24 @@
   require('php/dbconn.php');
   require('php/cookiefuncs.php');
   //collecting data from db
-  $tsql= "SELECT * FROM test";
+  $time1 = time();
+  $tsql= "INSERT INTO test VALUES (".$time1.");";
+  $getResults= sqlqry($conn, $tsql);
+    
+  $tsql= "SELECT * FROM test WHERE test = ".$time1.";";
   $getResults= sqlsrv_query($conn, $tsql);
-  if ($getResults == FALSE)
-    echo (sqlsrv_errors());
+  if ($getResults == FALSE){
+    echo (sqlsrv_errors());}
+
   $row = sqlsrv_fetch_array($getResults);
   $str = $row['test'];
   $cookiename = 'edwardo';
   $my_salt = 'SomeRandomString-hY5K92AzVnMYyT7';
   
+  //setting cookie
   setSafeCookie($cookiename,$my_salt,$str);
   $encrypted_string = $_COOKIE[$cookiename];
-  $decrypted_string = decrypt_string_and_decode($my_salt, $encrypted_string);
+  $decrypted_string = getSafeCookie($my_salt, $cookiename);
 ?>
 <html lang="en">
   <head>
@@ -28,7 +34,7 @@
   </head>
   <body>
 
-    <h1>AESTHETIC <small class="text-muted"><?php echo $str;?> </small></h1>
+    <h1>AESTHETIC <small class="text-muted"><?php echo $row['test'];?> </small></h1>
     <div class="alert alert-primary" role="alert">
       <p><?php echo "Encrypted Cookie:".$encrypted_string."<br/>";
         echo "Decrypted Cookie:".$decrypted_string;?>

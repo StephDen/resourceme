@@ -1,4 +1,5 @@
 <?php
+//IDK HOW THIS WORKS PLEASE DONT TOUCH
 // Encrypted cookie functions
 // requires mcrypt: http://php.net/manual/en/book.mcrypt.php
 
@@ -47,8 +48,10 @@ function decrypt_string_and_decode($salt, $string) {
 function setSafeCookie($cookiename,$salt, $string){
   $time = time()+60*60;
   setcookie($cookiename, encrypt_string_and_encode($salt, $string),$time,'/');
-}
-//getting a safe cookie
+  $_COOKIE[$cookiename] = encrypt_string_and_encode($salt, $string);
+  }
+  
+//fetches cookie based on salt and cookie name
 function getSafeCookie($salt,$cookiename){
 	return decrypt_string_and_decode($salt,$_COOKIE[$cookiename]);
 }
