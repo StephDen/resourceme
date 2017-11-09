@@ -9,10 +9,10 @@
     echo (sqlsrv_errors());
   $row = sqlsrv_fetch_array($getResults);
   $row = $row['test'];
-  $time = time()+60*60; //store cookie for one year
-  setcookie('testencrypt', $row,$time,'/');
-  $decookie = decryptCookie($_COOKIE['testencrypt']);
-  $thecookie = encryptCookie($row);
+  $cookiename = 'edwardo';
+  $cookiekey = 'AESTHETIC';
+  $thecookie = setSafeCookie($cookiename,$row,$cookiekey);
+  $decookie = getSafeCookie($cookiename, $cookiekey);
 ?>
 <html lang="en">
   <head>
