@@ -19,6 +19,7 @@
   setSafeCookie($cookiename,$my_salt,$str);
   $encrypted_string = $_COOKIE[$cookiename];
   $decrypted_string = getSafeCookie($my_salt, $cookiename);
+  //test
 ?>
 
 
