@@ -1,10 +1,21 @@
- .container{background: linear-gradient(337deg, #62feff, #ffa2fb, #ffe4a2, #a2ffc6);
+ .container{
+background: linear-gradient(337deg, #62feff, #ffa2fb, #ffe4a2, #a2ffc6);
 background-size: 800% 800%;
 
 -webkit-animation: AnimationName 27s ease infinite;
 -moz-animation: AnimationName 27s ease infinite;
 -o-animation: AnimationName 27s ease infinite;
 animation: AnimationName 27s ease infinite;
+}
+
+ .loadercontainer{
+background: linear-gradient(337deg, #62feff, #ffa2fb, #ffe4a2, #a2ffc6);
+background-size: 200% 200%;
+
+-webkit-animation: AnimationName 1s ease infinite;
+-moz-animation: AnimationName 1s ease infinite;
+-o-animation: AnimationName 1s ease infinite;
+animation: AnimationName 1s ease infinite;
 }
 
 @-webkit-keyframes AnimationName {
