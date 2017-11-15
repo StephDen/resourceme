@@ -6,7 +6,7 @@
   $time1 = time();
   $tsql= "INSERT INTO test VALUES (".$time1.");";
   $getResults= sqlqry($conn, $tsql);
-    
+
   $tsql= "SELECT * FROM test WHERE test = ".$time1.";";
   $getResults= sqlqry($conn, $tsql);
 
@@ -14,7 +14,7 @@
   $str = $row['test'];
   $cookiename = 'edwardo';
   $my_salt = 'SomeRandomString-hY5K92AzVnMYyT7';
-  
+
   //setting cookie
   setSafeCookie($cookiename,$my_salt,$str);
   $encrypted_string = $_COOKIE[$cookiename];
@@ -38,10 +38,11 @@
   </head>
   <body onload="myFunction()" style="margin:0;">
 
-    <div class="loadercontainer" id="loader"></div> 
-    
+    <div class="loadercontainer" id="loader"></div>
+
     <div style="display:none;" id="myDiv" class="animate-bottom">
       <h1>AESTHETIC<small class="text-muted"><?php echo $row['test'];?> </small></h1>
+      <img src="images/logo.png" alt="logo" class="container">
       <div class="alert alert-primary" role="alert">
         <p class="container"><?php echo "Encrypted Cookie:".$encrypted_string."<br/>";
           echo "Decrypted Cookie:".$decrypted_string;?>
