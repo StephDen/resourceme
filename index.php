@@ -26,6 +26,13 @@
 <!--HTML SECTION-->
 <html lang="en">
   <head>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+
     <title>AESTHETIC EDWARDO</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
