@@ -30,6 +30,7 @@
        #map {
         height: 400px;
         width: 100%;
+        overflow:visible;
        }
     </style>
 
