@@ -60,11 +60,11 @@
       });
     }
     </script>
-    <script type="text/javascript">
-      $(function(){
-        $('#btn').on('click', function(){
-           alert('click event');
-        });
+    <script>
+      $(document).ready(function() {
+          $('#btn').click(function() {
+              alert("Hello");
+          });
       });
     </script>
 
