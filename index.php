@@ -8,7 +8,6 @@
         overflow:visible;
        }
     </style>
-
     <title>AESTHETIC EDWARDO</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -19,7 +18,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   </head>
-  <body onload="myFunction()" style="margin:0;">
+  <body>
 
     <div class="loadercontainer" id="loader"></div>
 
@@ -30,18 +29,6 @@
     </div>
       <div id="map"></div>
     <!-- Optional JavaScript -->
-    <script>
-    var myVar;
-
-    function myFunction() {
-        myVar = setTimeout(showPage, 3000);
-    }
-
-    function showPage() {
-      document.getElementById("loader").style.display = "none";
-      document.getElementById("myDiv").style.display = "block";
-    }
-    </script>
 
     <!--GOOGLE MAPS JS-->
     <script async defer
