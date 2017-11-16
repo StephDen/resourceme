@@ -44,7 +44,7 @@
       <h1>AESTHETIC<small class="text-muted"><?php echo $row['test'];?> </small></h1>
       <img src="images/logo.png" alt="logo" class="container">
       <div class="alert alert-primary" role="alert">
-        <p class="container"><?php echo "Encrypted Cookie:".$encrypted_string."<br/>";
+        <p><?php echo "Encrypted Cookie:".$encrypted_string."<br/>";
           echo "Decrypted Cookie:".$decrypted_string;?>
         </p>
       </div>
