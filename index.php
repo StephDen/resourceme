@@ -6,7 +6,7 @@
   $time1 = time();
   $tsql= "INSERT INTO test VALUES (".$time1.");";
   $getResults= sqlqry($conn, $tsql);
-    
+
   $tsql= "SELECT * FROM test WHERE test = ".$time1.";";
   $getResults= sqlqry($conn, $tsql);
 
@@ -14,7 +14,7 @@
   $str = $row['test'];
   $cookiename = 'edwardo';
   $my_salt = 'SomeRandomString-hY5K92AzVnMYyT7';
-  
+
   //setting cookie
   setSafeCookie($cookiename,$my_salt,$str);
   $encrypted_string = $_COOKIE[$cookiename];
@@ -26,6 +26,13 @@
 <!--HTML SECTION-->
 <html lang="en">
   <head>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+
     <title>AESTHETIC EDWARDO</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -38,30 +45,52 @@
   </head>
   <body onload="myFunction()" style="margin:0;">
 
-    <div class="loadercontainer" id="loader"></div> 
-    
+    <div class="loadercontainer" id="loader"></div>
+
     <div style="display:none;" id="myDiv" class="animate-bottom">
       <h1>AESTHETIC<small class="text-muted"><?php echo $row['test'];?> </small></h1>
+      <img src="images/logo.png" alt="logo" class="container">
       <div class="alert alert-primary" role="alert">
-        <p class="container"><?php echo "Encrypted Cookie:".$encrypted_string."<br/>";
+        <p><?php echo "Encrypted Cookie:".$encrypted_string."<br/>";
           echo "Decrypted Cookie:".$decrypted_string;?>
         </p>
       </div>
+      <div id="map"></div>
     </div>
 
     <!-- Optional JavaScript -->
     <script>
-var myVar;
+    var myVar;
 
-function myFunction() {
-    myVar = setTimeout(showPage, 3000);
-}
+    function myFunction() {
+        myVar = setTimeout(showPage, 3000);
+    }
 
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("myDiv").style.display = "block";
-}
-</script>
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("myDiv").style.display = "block";
+    }
+    </script>
+
+    <!--GOOGLE MAPS JS-->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcxZD8BP-N5odbjYlzPDH6c3pcF8hL8Kw&callback=initMap">
+    </script>
+    <script>
+    function initMap() {
+      var uluru = {lat: -25.363, lng: 131.044};
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 4,
+        center: uluru
+      });
+      var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+      });
+    }
+    </script>
+
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
