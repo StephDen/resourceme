@@ -55,9 +55,9 @@
           echo "Decrypted Cookie:".$decrypted_string;?>
         </p>
       </div>
-      <div id="map"></div>
-    </div>
 
+    </div>
+      <div id="map"></div>
     <!-- Optional JavaScript -->
     <script>
     var myVar;
