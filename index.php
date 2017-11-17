@@ -1,3 +1,6 @@
+<?php
+  require('php/dbwrite.php');
+?>
 <!--HTML SECTION-->
 <html lang="en">
   <head>
@@ -48,7 +51,7 @@
           $('#btn').click(function() {
             alert('test');
             $.ajax({url: "php/dbwrite.php"});
-              $('#div1').html(<?php echo$hello?>)
+              alert(<?php echo $hello; ?>);
           });
       });
     </script>
