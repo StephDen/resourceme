@@ -28,7 +28,10 @@
           echo "Decrypted Cookie:".$decrypted_string;?>
         </p>
       </div>
-      <input name="postsubmit" type="submit" id="postsubmit" value="POST"/>
+      <form name="postcontent" id="postcontent">
+              <input name="postsubmit" type="submit" id="postsubmit" value="POST"/>
+              <textarea id="postdata" name="postdata" placeholder="What's Up ?"></textarea>
+      </form>
       <div id="output"></div>
       <!--<div id="map"></div>-->
 
