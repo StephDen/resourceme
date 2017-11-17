@@ -47,9 +47,8 @@
     <script>
       $(document).ready(function() {
           $('#btn').click(function(){
-            $.post("php/dbwrite.php");
-            posting.done(function() {
-            document.getElementById("result").innerHTML = this.responseText;
+            $.post( "php/dbwrite.php", function( data ) {
+              $( "#result" ).html( data );
             });
           });
       });
