@@ -54,7 +54,7 @@
             $.ajax({
                 url: 'php/dbwrite.php',
                 type: 'post',
-                data: $("#postcontent").serialize();
+                data: 'hello';
                 success: function(data){
                     alert('test');
                     var result = data
