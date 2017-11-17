@@ -47,7 +47,7 @@
       $(document).ready(function() {
           $('#btn').click(function() {
             alert('test');
-            $.ajax({type: "POST", url: "php/dbwrite.php"});
+            $.ajax({url: "php/dbwrite.php"});
               $('#div1').html(<?php echo$hello?>)
           });
       });
