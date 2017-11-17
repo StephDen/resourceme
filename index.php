@@ -51,7 +51,7 @@
       $(document).ready(function() {
         $("#postcontent").on('submit', function(e) {
             e.preventDefault();
-            $.ajax({
+            /*$.ajax({
                 url: 'php/dbwrite.php',
                 type: 'post',
                 data: $("#postcontent").serialize();
@@ -64,7 +64,7 @@
                   alert(xhr.status);
                   alert(thrownError);
                 }
-            });
+            });*/
           });
       });
     </script>
