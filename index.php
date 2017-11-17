@@ -46,6 +46,7 @@
     <script>
       $(document).ready(function() {
           $('#btn').click(function() {
+            alert('test');
             $.ajax({type: "POST", url: "php/dbwrite.php"});
           });
       });
