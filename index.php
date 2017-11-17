@@ -53,7 +53,7 @@
             e.preventDefault();
             $.ajax({
                 url: 'php/dbwrite.php',
-                type: 'post',
+                method: 'post',
                 data: 'hello';
                 success: function(data){
                     alert('test');
