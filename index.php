@@ -49,7 +49,7 @@
           $('#btn').click(function(){
             $.post("php/dbwrite.php");
             posting.done(function() {
-            document.getElementById("txtHint").innerHTML = this.responseText;
+            document.getElementById("result").innerHTML = this.responseText;
             });
           });
       });
