@@ -55,7 +55,7 @@
                 url: 'php/dbwrite.php',
                 type: 'post',
                 data: $("#postcontent").serialize();
-                success: function(data) {
+                success: function(data){
                     var result = data
                     $('#output').html(result);
                 }
