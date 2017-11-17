@@ -54,7 +54,8 @@
             $.ajax({
                 url: 'php/dbwrite.php',
                 type: 'POST',
-                data: $("#postcontent").serialize(),
+                dataType: 'json',
+                data: {data: qwerty},
                 success: function(data){
                     alert('test');
                     var result = data
