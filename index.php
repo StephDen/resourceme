@@ -53,7 +53,7 @@
             e.preventDefault();
             $.ajax({
                 url: 'php/dbwrite.php',
-                method: 'POST',
+                type: 'POST',
                 data: $("#postcontent").serialize(),
                 success: function(data){
                     alert('test');
