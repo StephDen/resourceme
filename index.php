@@ -20,14 +20,12 @@
   </head>
   <body>
 
-    <div class="loadercontainer" id="loader"></div>
-
-    <div style="display:none;" id="myDiv" class="animate-bottom">
       <h1>AESTHETIC<small class="text-muted"><?php echo $row['test'];?> </small></h1>
       <img src="images/logo.png" alt="logo" class="container">
       <button type="button" id="btn">INSERT INTO DB</button>
-    </div>
       <div id="map"></div>
+
+
     <!-- Optional JavaScript -->
 
     <!--GOOGLE MAPS JS-->
