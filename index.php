@@ -30,8 +30,6 @@
       </div>
       <div id="map"></div>
 
-
-
     <!--GOOGLE MAPS JS-->
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAc8Wjn3kVVr0XU9Dyi3kWvfaVvSy243sY&callback=initMap">
@@ -48,7 +46,7 @@
     <script>
       $(document).ready(function() {
           $('#btn').click(function() {
-            $.post( "dbwrite.php" );
+            $.ajax({type: "POST", url: "php/dbwrite.php"});
           });
       });
     </script>
