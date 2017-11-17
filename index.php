@@ -56,6 +56,7 @@
                 type: 'post',
                 data: $("#postcontent").serialize();
                 success: function(data){
+                    alert('test');
                     var result = data
                     $('#output').html(result);
                 }
