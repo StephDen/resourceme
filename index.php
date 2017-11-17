@@ -23,6 +23,11 @@
       <h1>AESTHETIC<small class="text-muted">EDWARDO</small></h1>
       <img src="images/logo.png" alt="logo" class="container">
       <button type="button" id="btn">INSERT INTO DB</button>
+      <div class="alert alert-primary" role="alert">
+        <p><?php echo "Encrypted Cookie:".$encrypted_string."<br/>";
+          echo "Decrypted Cookie:".$decrypted_string;?>
+        </p>
+      </div>
       <div id="map"></div>
 
 

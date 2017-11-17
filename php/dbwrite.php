@@ -20,10 +20,6 @@
   $encrypted_string = $_COOKIE[$cookiename];
   $decrypted_string = getSafeCookie($my_salt, $cookiename);
   //test
-  print '<div class="alert alert-primary" role="alert">
-    <p><?php echo "Encrypted Cookie:".$encrypted_string."<br/>";
-      echo "Decrypted Cookie:".$decrypted_string;?>
-    </p>
-  </div>';
+  echo 'hello';
 
 ?>
