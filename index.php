@@ -54,7 +54,7 @@
             $.ajax({
                 url: 'php/dbwrite.php',
                 method: 'POST',
-                data: 'hello';
+                data: 'hello',
                 success: function(data){
                     alert('test');
                     var result = data
