@@ -48,10 +48,12 @@
     <!-- Optional JavaScript -->
     <script>
       $(document).ready(function() {
-          $('#btn').click(function() {
+          $('#btn').click(function(){
             alert('test');
-            $.ajax("php/dbwrite.php");
+            $.ajax("php/dbwrite.php").done(function() {
+              alert( "success" );
               alert(<?php echo $hello; ?>);
+            });
           });
       });
     </script>
