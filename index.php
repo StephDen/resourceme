@@ -27,24 +27,6 @@
 
 
     <!-- Optional JavaScript -->
-
-    <!--GOOGLE MAPS JS-->
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAc8Wjn3kVVr0XU9Dyi3kWvfaVvSy243sY&callback=initMap">
-    </script>
-    <script>
-    function initMap() {
-      var uluru = {lat: -25.363, lng: 131.044};
-      var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 4,
-        center: uluru
-      });
-      var marker = new google.maps.Marker({
-        position: uluru,
-        map: map
-      });
-    }
-    </script>
     <script>
       $(document).ready(function() {
           $('#btn').click(function() {
@@ -52,6 +34,14 @@
           });
       });
     </script>
+    <!-- Optional JavaScript -->
+
+    <!--GOOGLE MAPS JS-->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAc8Wjn3kVVr0XU9Dyi3kWvfaVvSy243sY&callback=initMap">
+    </script>
+    <script src="js/gglmps.js"></script>
+    <!--GOOGLE MAPS JS-->
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
