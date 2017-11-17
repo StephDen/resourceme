@@ -60,6 +60,10 @@
                     var result = data
                     $('#output').html(result);
                 }
+                error: function (xhr, ajaxOptions, thrownError) {
+                  alert(xhr.status);
+                  alert(thrownError);
+                }
             });
           });
       });
