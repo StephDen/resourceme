@@ -28,7 +28,7 @@
           echo "Decrypted Cookie:".$decrypted_string;?>
         </p>
       </div>
-      <div id="map"></div>
+      <!--<div id="map"></div>-->
 
     <!--GOOGLE MAPS JS-->
     <script async defer
