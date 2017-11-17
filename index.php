@@ -23,7 +23,7 @@
       <h1>AESTHETIC<small class="text-muted">EDWARDO</small></h1>
       <img src="images/logo.png" alt="logo" class="container">
       <button type="button" id="btn">INSERT INTO DB</button>
-      <div class="alert alert-primary" role="alert">
+      <div class="alert alert-primary" role="alert" id='div1'>
         <p><?php echo "Encrypted Cookie:".$encrypted_string."<br/>";
           echo "Decrypted Cookie:".$decrypted_string;?>
         </p>
@@ -48,6 +48,7 @@
           $('#btn').click(function() {
             alert('test');
             $.ajax({type: "POST", url: "php/dbwrite.php"});
+              $('#div1').html(<?php echo$hello?>)
           });
       });
     </script>
