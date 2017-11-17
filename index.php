@@ -31,6 +31,7 @@
           echo "Decrypted Cookie:".$decrypted_string;?>
         </p>
       </div>
+      <div id = 'result'></div>
       <!--<div id="map"></div>-->
 
     <!--GOOGLE MAPS JS-->
@@ -48,10 +49,9 @@
     <script>
       $(document).ready(function() {
           $('#btn').click(function(){
-            alert('test');
-            $.get("php/dbwrite.php").done(function() {
-              alert( "success" );
-              alert(<?php echo $hello; ?>);
+            $.post("php/dbwrite.php");
+            posting.done(function() {
+            document.getElementById("txtHint").innerHTML = this.responseText;
             });
           });
       });

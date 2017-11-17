@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html>
+<body>
 <?php
   //connecting to db
   require('php/dbconn.php');
@@ -21,5 +24,7 @@
   $decrypted_string = getSafeCookie($my_salt, $cookiename);
   //test
   $hello =  "hello";
-
+  echo '<p>'.$hello.'</p>';
 ?>
+</body>
+</html>
