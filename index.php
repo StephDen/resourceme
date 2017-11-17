@@ -50,7 +50,7 @@
       $(document).ready(function() {
           $('#btn').click(function(){
             alert('test');
-            $.ajax("php/dbwrite.php").done(function() {
+            $.get("php/dbwrite.php").done(function() {
               alert( "success" );
               alert(<?php echo $hello; ?>);
             });
