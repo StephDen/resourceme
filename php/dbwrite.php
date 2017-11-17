@@ -3,7 +3,7 @@
   require('php/dbconn.php');
   require('php/cookiefuncs.php');
   //collecting data from db
-  $input = $_POST['data'];
+  $input = $_POST['postsubmit'];
   $tsql= "INSERT INTO test VALUES (".$input.");";
   $getResults= sqlqry($conn, $tsql);
 
