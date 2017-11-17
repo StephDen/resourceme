@@ -1,6 +1,4 @@
-<?php
-  require('php/dbwrite.php');
-?>
+
 <!--HTML SECTION-->
 <html lang="en">
   <head>
