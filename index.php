@@ -1,4 +1,3 @@
-
 <!--HTML SECTION-->
 <html lang="en">
   <head>
@@ -29,6 +28,7 @@
           echo "Decrypted Cookie:".$decrypted_string;?>
         </p>
       </div>
+      <input name="postsubmit" type="submit" id="postsubmit" value="POST"/>
       <div id="output"></div>
       <!--<div id="map"></div>-->
 
