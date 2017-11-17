@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html>
-<body>
 <?php
   //connecting to db
   require('php/dbconn.php');
   require('php/cookiefuncs.php');
   //collecting data from db
-  $time1 = time();
-  $tsql= "INSERT INTO test VALUES (".$time1.");";
+  $input = $_POST['']
+  $tsql= "INSERT INTO test VALUES (".$input.");";
   $getResults= sqlqry($conn, $tsql);
 
-  $tsql= "SELECT * FROM test WHERE test = ".$time1.";";
+  $tsql= "SELECT * FROM test WHERE test = ".$input.";";
   $getResults= sqlqry($conn, $tsql);
 
   $row = sqlsrv_fetch_array($getResults);
@@ -26,5 +23,3 @@
   $hello =  "hello";
   echo '<p>'.$hello.'</p>';
 ?>
-</body>
-</html>

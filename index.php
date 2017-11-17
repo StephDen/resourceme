@@ -24,12 +24,12 @@
       <h1>AESTHETIC<small class="text-muted">EDWARDO</small></h1>
       <img src="images/logo.png" alt="logo" class="container">
       <button type="button" id="btn">INSERT INTO DB</button>
-      <div class="alert alert-primary" role="alert" id='div1'>
+      <div class="alert alert-primary" role="alert" >
         <p><?php echo "Encrypted Cookie:".$encrypted_string."<br/>";
           echo "Decrypted Cookie:".$decrypted_string;?>
         </p>
       </div>
-      <div id = 'result'></div>
+      <div id="output"></div>
       <!--<div id="map"></div>-->
 
     <!--GOOGLE MAPS JS-->
@@ -47,8 +47,17 @@
     <script>
       $(document).ready(function() {
           $('#btn').click(function(){
-            $.post( "php/dbwrite.php", function( data ) {
-              $( "#result" ).html( data );
+            $.ajax({
+                url: 'php/dbwrite.php',
+                type: 'post',
+                dataType: 'json',
+                data: {
+                    email: 'test'
+                },
+                success: function(data) {
+                    var result = data
+                    $('#output').html(result);
+                }
             });
           });
       });
