@@ -52,7 +52,7 @@
                 type: 'post',
                 dataType: 'json',
                 data: {
-                    email: 'test'
+                    msg: 'test'
                 },
                 success: function(data) {
                     var result = data
