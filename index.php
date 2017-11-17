@@ -20,7 +20,7 @@
   </head>
   <body>
 
-      <h1>AESTHETIC<small class="text-muted"><?php echo $row['test'];?> </small></h1>
+      <h1>AESTHETIC<small class="text-muted">EDWARDO</small></h1>
       <img src="images/logo.png" alt="logo" class="container">
       <button type="button" id="btn">INSERT INTO DB</button>
       <div id="map"></div>
@@ -43,7 +43,7 @@
     <script>
       $(document).ready(function() {
           $('#btn').click(function() {
-            $.post( "test.php" );
+            $.post( "dbwrite.php" );
           });
       });
     </script>
