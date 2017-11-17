@@ -27,7 +27,6 @@
 
 
 
-
     <!--GOOGLE MAPS JS-->
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAc8Wjn3kVVr0XU9Dyi3kWvfaVvSy243sY&callback=initMap">
@@ -44,7 +43,7 @@
     <script>
       $(document).ready(function() {
           $('#btn').click(function() {
-              alert("Hello");
+            $.post( "test.php" );
           });
       });
     </script>
