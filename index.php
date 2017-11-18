@@ -4,8 +4,7 @@ require('php/dbwrite.php');
 ?>
 <!--HTML SECTION-->
 <html lang="en">
-  <head> <!-- Spagetto-->
-
+  <head>
     <title>AESTHETIC EDWARDO</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -19,12 +18,11 @@ require('php/dbwrite.php');
       <link rel="stylesheet" type="text/css" href="css/loader.css">
   </head>
   <body>
-
       <h1>AESTHETIC<small class="text-muted">EDWARDO</small></h1>
       <img src="images/logo.png" alt="logo" class="container">
       <div class="alert alert-primary" role="alert" >
         <p><?php echo "Encrypted Cookie:".$encrypted_string."<br/>";
-          echo "Decrypted Cookie:".$decrypted_string;?>
+          echo "Decrypted Cookie:".$decrypted_string?>
         </p>
       </div>
       <button onClick="window.location='map.php';" value="click for good job" />
