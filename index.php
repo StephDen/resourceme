@@ -4,7 +4,7 @@ require'php/dbconnect.php';
 $tsql = "INSERT INTO test (test) VALUES (5);";
 dbconnect::sqlqry($tsql);
 ?>
-<html lang="en">
+<html>
   <head>
     <title>ResourceMe</title>
     <!-- Required meta tags -->
