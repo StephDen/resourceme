@@ -1,11 +1,15 @@
 <?php
-//testing if it will write to db
-require('php/dbwrite.php');
+require('php/getlocdb.php');
 ?>
 <!--HTML SECTION-->
 <html lang="en">
-  <head> <!-- Spagetto-->
-
+  <head>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
     <title>AESTHETIC EDWARDO</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -17,17 +21,15 @@ require('php/dbwrite.php');
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   </head>
   <body>
+    <p>hi</p>
+    <div id="map"></div>
 
-      <h1>AESTHETIC<small class="text-muted">EDWARDO</small></h1>
-      <img src="images/logo.png" alt="logo" class="container">
-      <div class="alert alert-primary" role="alert" >
-        <p><?php echo "Encrypted Cookie:".$encrypted_string."<br/>";
-          echo "Decrypted Cookie:".$decrypted_string;?>
-        </p>
-      </div>
-      <button onClick="window.location='map.php';" value="click for good job" />
-
-
+    <!--GOOGLE MAPS JS-->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAc8Wjn3kVVr0XU9Dyi3kWvfaVvSy243sY&callback=initMap">
+    </script>
+    <script src="js/gglmps.js"></script>
+    <!--GOOGLE MAPS JS-->
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
