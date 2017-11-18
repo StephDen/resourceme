@@ -1,10 +1,10 @@
 <?php
 class dbconnect{
   //server name
-  private $serverName = "resourceme.database.windows.net";
+  private $serverName = "blochacks.database.windows.net";
   //Connection array with log in credentials
   private $connectionOptions = array(
-      "Database" => "User_Id",
+      "Database" => "resources",
       "Uid" => "bigadmin",
       "PWD" => "Qwerty!@#"
   );
