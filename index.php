@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
 echo'connecting';
 require'php/dbconnect.php';
