@@ -22,4 +22,5 @@
 
 <?php
   require 'php/dbconnect.php';
+  echo 'hello';
 ?>
