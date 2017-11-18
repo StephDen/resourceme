@@ -1,9 +1,9 @@
 <?php
-echo'connecting';
-require'php/dbconnect.php';
+echo 'connecting';
+require('php/dbconnect.php');
 $tsql = "INSERT INTO test (test) VALUES (5);";
 ?>
-<html>
+<html lang="en">
   <head>
     <title>ResourceMe</title>
     <!-- Required meta tags -->
@@ -15,7 +15,6 @@ $tsql = "INSERT INTO test (test) VALUES (5);";
   </head>
   <body>
     <h1>hi</h1>
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
