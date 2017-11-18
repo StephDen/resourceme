@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-require('php/dbconnect.php');
+require'php/dbconnect.php';
 $tsql = "INSERT INTO test (test) VALUES (5);"
 dbconnect::sqlqry($tsql);
 ?>
