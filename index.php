@@ -69,6 +69,5 @@
       });
     </script>
     <!-- Optional JavaScript -->
-
   </body>
 </html>
