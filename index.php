@@ -2,6 +2,7 @@
 //testing if it will write to db
 require('php/dbwrite.php');
 ?>
+<!DOCTYPE html>
 <!--HTML SECTION-->
 <html lang="en">
   <head>
