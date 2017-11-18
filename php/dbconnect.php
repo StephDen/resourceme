@@ -1,4 +1,3 @@
-
 <?php
 class dbconnect{
   //server name
@@ -24,15 +23,4 @@ class dbconnect{
 
 }
 
-
-/*How to query---------------------------------
-$getResults= sqlsrv_query($conn, $tsql);
-
-Catching errors--------------------------------
-if ($getResults == FALSE)
-    echo (sqlsrv_errors());
-while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
- echo ($row['CategoryName'] . " " . $row['ProductName'] . PHP_EOL);
-}
-sqlsrv_free_stmt($getResults);*/
 ?>
