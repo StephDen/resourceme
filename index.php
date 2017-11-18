@@ -1,7 +1,5 @@
 <?php
 echo 'connecting';
-require('php/dbconnect.php');
-$tsql = "INSERT INTO test (test) VALUES (5);";
 ?>
 <html lang="en">
   <head>
