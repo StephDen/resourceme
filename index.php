@@ -1,6 +1,6 @@
 <!--HTML SECTION-->
 <html lang="en">
-  <head>
+  <head> <!-- Spagetto-->
     <style>
        #map {
         height: 400px;
