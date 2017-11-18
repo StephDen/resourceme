@@ -8,7 +8,6 @@ require('php/getlocdb.php');
        #map {
         height: 400px;
         width: 100%;
-        overflow:visible;
        }
     </style>
     <title>AESTHETIC EDWARDO</title>
