@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <?php
+echo'connecting';
 require'php/dbconnect.php';
-$tsql = "INSERT INTO test (test) VALUES (5);"
+$tsql = "INSERT INTO test (test) VALUES (5);";
 dbconnect::sqlqry($tsql);
 ?>
 <html lang="en">
