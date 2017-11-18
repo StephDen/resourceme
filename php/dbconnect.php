@@ -17,7 +17,8 @@ class dbconnect{
       if ($getResults == FALSE){
           echo (sqlsrv_errors());
         }
-      return $getResults
+      $row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)
+      return $row;
   }
 
 }
