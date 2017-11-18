@@ -1,13 +1,11 @@
+<?php
+//testing if it will write to db
+require('php/dbwrite.php');
+?>
 <!--HTML SECTION-->
 <html lang="en">
   <head> <!-- Spagetto-->
-    <style>
-       #map {
-        height: 400px;
-        width: 100%;
-        overflow:visible;
-       }
-    </style>
+
     <title>AESTHETIC EDWARDO</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -27,47 +25,14 @@
           echo "Decrypted Cookie:".$decrypted_string;?>
         </p>
       </div>
-      <form name="postcontent" id="postcontent">
-              <input name="postsubmit" type="submit" id="postsubmit" value="POST"/>
-              <textarea id="postdata" name="postdata" placeholder="What's Up ?"></textarea>
-      </form>
-      <div id="output"></div>
-      <!--<div id="map"></div>-->
+      <button onClick="window.location='map.php';" value="click for good job" />
 
-    <!--GOOGLE MAPS JS-->
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAc8Wjn3kVVr0XU9Dyi3kWvfaVvSy243sY&callback=initMap">
-    </script>
-    <script src="js/gglmps.js"></script>
-    <!--GOOGLE MAPS JS-->
+
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <!-- Optional JavaScript -->
-    <script>
-      $(document).ready(function() {
-        $("#postcontent").on('submit', function(e) {
-            e.preventDefault();
-            $.ajax({
-                url: 'php/dbwrite.php',
-                type: 'POST',
-                data: $("#postcontent").serialize(),
-                success: function(data){
-                    alert('test');
-                    var result = data
-                    $('#output').html(result);
-                },
-                error: function (xhr, ajaxOptions, thrownError) {
-                  alert(xhr.status);
-                  alert(thrownError);
-                }
-            });
-          });
-      });
-    </script>
     <!-- Optional JavaScript -->
   </body>
 </html>
