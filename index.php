@@ -1,5 +1,5 @@
 <?php
-  require('php/dbconnect.php');
+  require 'php/dbconnect.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
