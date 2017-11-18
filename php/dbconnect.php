@@ -14,6 +14,7 @@ class dbconnect{
   //querying function
   public static function sqlqry($tsql){
       $getResults = sqlsrv_query($this->$conn, $tsql);
+      echo 'connected';
       if ($getResults == FALSE){
           echo (sqlsrv_errors());
         }
