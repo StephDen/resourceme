@@ -1,6 +1,7 @@
 <?php
   require('php/dbconnect.php');
 ?>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>ResourceMe</title>
