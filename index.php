@@ -1,6 +1,6 @@
 <?php
 require('php/classtest.php');
-classtest::test;
+
 echo 'connecting';
 ?>
 <html lang="en">
