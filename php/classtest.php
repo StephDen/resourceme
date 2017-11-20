@@ -1,3 +1,4 @@
+
 <?php
 class classtest{
 public static function test(){
@@ -6,3 +7,4 @@ public static function test(){
 
 }
   ?>
+
