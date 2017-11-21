@@ -3,11 +3,11 @@ class dbconnect {
   //server name
   private static $serverName = "blochacks.database.windows.net";
   //Connection array with log in credentials
-  /*private static $connectionOptions = array(
+  private static $connectionOptions = array(
       "Database" => "resources",
       "Uid" => "bigadmin",
       "PWD" => "Qwerty!@#"
-  );*/
+  );
   //connection variable
   //private static $conn = sqlsrv_connect(dbconnect::$serverName, dbconnect::$connectionOptions);
 
