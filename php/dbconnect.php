@@ -9,11 +9,11 @@ class dbconnect{
       "PWD" => "Qwerty!@#"
   );
   //connection variable
-  private static $conn = sqlsrv_connect($this->$serverName, $this->$connectionOptions);
+  private static $conn = sqlsrv_connect(dbconnect::$serverName, dbconnect::$connectionOptions);
 
   //querying function
   public static function sqlqry($tsql){
-      $getResults = sqlsrv_query($this->$conn, $tsql);
+      $getResults = sqlsrv_query(dbconnect::$conn, $tsql);
       echo 'connected';
       if ($getResults == FALSE){
           echo (sqlsrv_errors());
