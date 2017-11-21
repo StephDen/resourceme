@@ -9,10 +9,10 @@ class dbconnect {
       "PWD" => "Qwerty!@#"
   );
   //connection variable
-  private static $conn = sqlsrv_connect(self::$serverName, self::$connectionOptions);
+  //private static $conn = sqlsrv_connect(self::$serverName, self::$connectionOptions);
 
   //querying function
-  /*public static function sqlqry($tsql){
+  public static function sqlqry($tsql){
       $getResults = sqlsrv_query(dbconnect::$conn, $tsql);
       echo 'connected';
       if ($getResults == FALSE){
@@ -20,7 +20,7 @@ class dbconnect {
         }
       $row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)
       return $row;
-  };*/
+  };
 
 }
 
