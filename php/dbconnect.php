@@ -8,10 +8,11 @@ class dbconnect {
       "Uid" => "bigadmin",
       "PWD" => "Qwerty!@#"
   );
+  private static $conn = sqlsrv_connect(self::$serverName,self::$connectionOptions);
   //querying function
-  public static function sqlqry1(){
+  public static function sqlqry1($tsql){
 
-      $conn = sqlsrv_connect(self::$serverName,self::$connectionOptions);
+
       $getResults = sqlsrv_query($conn, $tsql);
       echo 'connected';
       if ($getResults == FALSE){
