@@ -2,7 +2,7 @@
 class dbconnect {
 
   //querying function
-  public static function sqlqry($tsql){
+  public static function sqlqry1(){
       //server name
       $serverName = "blochacks.database.windows.net";
       //Connection array with log in credentials
