@@ -13,7 +13,7 @@ class dbconnect {
   public static function sqlqry1($tsql){
 
 
-      $getResults = sqlsrv_query($conn, $tsql);
+      $getResults = sqlsrv_query(self::$conn, $tsql);
       echo 'connected';
       if ($getResults == FALSE){
           echo (sqlsrv_errors());
