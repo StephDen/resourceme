@@ -6,5 +6,4 @@ public static function test(){
 }
 
 }
-  ?>
-
+?>
