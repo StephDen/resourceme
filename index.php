@@ -1,6 +1,6 @@
 <?php
 require_once('php/dbconnect.php');
-dbconnect::sqlqry1("INSERT INTO markers VALUES (1,2,3)");
+dbconnect::sqlqry1("INSERT INTO test VALUES (12)");
 echo 'connecting';
 ?>
 <html lang="en">
