@@ -11,8 +11,8 @@ class dbconnect {
           "Uid" => "bigadmin",
           "PWD" => "Qwerty!@#"
       );
-      $conn = sqlsrv_connect(self::$serverName, self::$connectionOptions);
-      $getResults = sqlsrv_query(self::$conn, $tsql);
+      $conn = sqlsrv_connect($serverName,$connectionOptions);
+      $getResults = sqlsrv_query($conn, $tsql);
       echo 'connected';
       if ($getResults == FALSE){
           echo (sqlsrv_errors());
