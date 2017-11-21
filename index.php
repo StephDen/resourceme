@@ -1,6 +1,6 @@
 <?php
 require_once('php/dbconnect.php');
-dbconnect::sqlqry1("INSERT INTO test VALUES (12)");
+require_once('php/encrypt.php');
 echo 'connecting';
 ?>
 <html lang="en">
