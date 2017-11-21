@@ -1,15 +1,15 @@
 <?php
 class dbconnect{
   //server name
-  private static $serverName = "blochacks.database.windows.net";
+  private $serverName = "blochacks.database.windows.net";
   //Connection array with log in credentials
-  private static $connectionOptions = array(
+  private $connectionOptions = array(
       "Database" => "resources",
       "Uid" => "bigadmin",
       "PWD" => "Qwerty!@#"
   );
   //connection variable
-  private static $conn = sqlsrv_connect($this->$serverName, $this->$connectionOptions);
+  private $conn = sqlsrv_connect($this->$serverName, $this->$connectionOptions);
 
   //querying function
   public static function sqlqry($tsql){
