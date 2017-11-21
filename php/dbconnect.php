@@ -12,15 +12,15 @@ class dbconnect {
   //private static $conn = sqlsrv_connect(self::$serverName, self::$connectionOptions);
 
   //querying function
-  /*public static function sqlqry($tsql){
-      $getResults = sqlsrv_query(dbconnect::$conn, $tsql);
+  public static function sqlqry($tsql){
+      $getResults = sqlsrv_query(self::$conn, $tsql);
       echo 'connected';
       if ($getResults == FALSE){
           echo (sqlsrv_errors());
         }
       $row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)
       return $row;
-  };*/
+  };
 
 }
 
