@@ -1,6 +1,8 @@
 <?php
 require_once('php/dbconnect.php');
 require_once('php/encrypt.php');
+$test=sign_string('hello');
+echo signed_string_is_valid($test);
 echo 'connecting';
 ?>
 <html lang="en">
