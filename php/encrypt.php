@@ -26,9 +26,9 @@ function signed_string_is_valid($signed_string) {
 	// checksum and therefore the same signed string.
 	$new_signed_string = sign_string($array[0]);
 	if($new_signed_string == $signed_string) {
-		return true;
+		return 'true';
 	} else {
-		return false;
+		return' false';
 	}
 }
 
