@@ -43,6 +43,7 @@ class tokenID
                 encrypt::decrypt_string(encrypt::signtoken('SERVERtime')),
                 time()+(86400 * 30)
             );//time = 30days
+            $_COOKIE['resourcemetoken'] = encrypt::decrypt_string(encrypt::signtoken('SERVERtime'));
         }
 
     }
