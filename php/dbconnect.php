@@ -18,9 +18,9 @@ class dbconnect {
           echo (sqlsrv_errors());
         }
         //turns the query results into an array
-      while( $row = sqlsrv_fetch_array( $getResults, SQLSRV_FETCH_ASSOC) ) {
-          echo $row['Location'].", ".$row['address']."<br />";
-      }
+      //while( $row = sqlsrv_fetch_array( $getResults, SQLSRV_FETCH_ASSOC) ) {
+      //    echo $row['Location'].", ".$row['address']."<br />";
+      //}
       $row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC);
       return $row;
   }
