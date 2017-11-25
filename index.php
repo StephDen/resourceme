@@ -6,7 +6,7 @@ require_once ('php/tokenID.php');
 //--------------------------------------------
 //Start of actual code------------------------
 tokenID::hardcodecookie();
-tokenID::authenticate();
+//tokenID::authenticate();
 ?>
 <html lang="en">
   <head>
