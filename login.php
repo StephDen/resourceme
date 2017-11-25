@@ -11,5 +11,5 @@ require_once('php/dbconnect.php');
 echo 'please log in';
 
 $returntext = dbconnect::sql_query('Select * FROM test');
-echo $returntext.[Address];
+echo $returntext.['address'];
 ?>
