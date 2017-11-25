@@ -59,7 +59,7 @@ tokenID::hardcodecookie();
           <p>
             <a href="#" class="btn btn-primary">Main call to action</a>
               <!--changing following line to navigate to login.php (instead of href = "#")-->
-            <a href="login.php" class="btn btn-secondary">Secondary action</a>
+            <a href="login.php" class="btn btn-secondary">Login Button</a>
           </p>
         </div>
       </section>
