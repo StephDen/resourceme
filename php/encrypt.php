@@ -2,7 +2,7 @@
 //IDK HOW THIS WORKS PLEASE DONT TOUCH
 // Encrypted cookie functions
 // requires mcrypt: http://php.net/manual/en/book.mcrypt.
-class cookies
+class encrypt
 {
     /**
      * @param $string
