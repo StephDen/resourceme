@@ -13,7 +13,7 @@ class encrypt
         // Using $salt makes it hard to guess how $checksum is generated
         // Caution: changing salt will invalidate all signed strings
         $salt = "Simple salt";
-        $checksum = sha1($string . $salt); // Any hash algorithm would work
+        $checksum = sha1($string . $salt); // A random hash algorithm
         // return the string with the checksum at the end
         return $string . '--' . $checksum;
     }
