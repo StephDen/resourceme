@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="resources@blochacks.database.windows.net" uuid="ff7f2134-ddde-4457-b677-1bc4edb9f9d1">
+      <database-info product="Microsoft SQL Server" version="12.00.900" jdbc-version="4.2" driver-name="Microsoft JDBC Driver 6.0 for SQL Server" driver-version="6.0.8112.100">
+        <extra-name-characters>$#@</extra-name-characters>
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>bigadmin</user-name>
+      <introspection-schemas>@:@|resources:</introspection-schemas>
+    </data-source>
+  </component>
+</project>

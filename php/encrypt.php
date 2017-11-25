@@ -3,6 +3,10 @@
 // Encrypted cookie functions
 // requires mcrypt: http://php.net/manual/en/book.mcrypt.php
 
+/**
+ * @param $string
+ * @return string
+ */
 function sign_string($string) {
 	// Using $salt makes it hard to guess how $checksum is generated
 	// Caution: changing salt will invalidate all signed strings
@@ -12,10 +16,15 @@ function sign_string($string) {
 	return encrypt_string_and_encode($salt, $string.'--'.$checksum);
 }
 
+/**
+ * @param $signed_string
+ * @return bool|string
+ */
 function signed_string_is_valid($signed_string) {
 	$salt = "Simple salt";
 	//decrypting the string ad then exploding
-	$array = explode('--', decrypt_string_and_decode($salt, $signed_string));
+	$decryptedString = decrypt_string_and_decode($salt, $signed_string);
+	$array = explode('--', $decryptedString);
 
 	if(count($array) != 2) {
 		// string is malformed or not signed
@@ -32,6 +41,11 @@ function signed_string_is_valid($signed_string) {
 	}
 }
 
+/**
+ * @param $salt
+ * @param $string
+ * @return string
+ */
 function encrypt_string($salt, $string) {
 	// Configuration (must match decryption)
 	$cipher_type = MCRYPT_RIJNDAEL_256;
@@ -48,6 +62,11 @@ function encrypt_string($salt, $string) {
 	return $iv . $encrypted_string;
 }
 
+/**
+ * @param $salt
+ * @param $iv_with_string
+ * @return TYPE_NAME
+ */
 function decrypt_string($salt, $iv_with_string) {
 	// Configuration (must match encryption)
 	$cipher_type = MCRYPT_RIJNDAEL_256;
@@ -59,16 +78,26 @@ function decrypt_string($salt, $iv_with_string) {
 	$iv = substr($iv_with_string, 0, $iv_size);
 	$encrypted_string = substr($iv_with_string, $iv_size);
 
-	$string = mcrypt_decrypt($cipher_type, $salt, $encrypted_string, $cipher_mode, $iv);
+    $string = mcrypt_decrypt($cipher_type, $salt, $encrypted_string, $cipher_mode, $iv);
 	return $string;
 }
 
 // Encode after encryption to ensure encrypted characters are savable
+/**
+ * @param $salt
+ * @param $string
+ * @return string
+ */
 function encrypt_string_and_encode($salt, $string) {
 	return base64_encode(encrypt_string($salt, $string));
 }
 
 // Decode before decryption
+/**
+ * @param $salt
+ * @param $string
+ * @return TYPE_NAME
+ */
 function decrypt_string_and_decode($salt, $string) {
 	return decrypt_string($salt, base64_decode($string));
 }
