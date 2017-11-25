@@ -17,5 +17,10 @@ class tokenID
             return;
         }
     }
+
+    public static function hardcodecookie(){
+        //hardcodes an authentication cookie to show that token system works
+
+    }
 }
 ?>
