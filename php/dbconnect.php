@@ -21,8 +21,8 @@ class dbconnect {
       while( $row = sqlsrv_fetch_array( $getResults, SQLSRV_FETCH_ASSOC) ) {
           echo $row['Location'].", ".$row['address']."<br />";
       }
-      //$row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC);
-      //return $row;
+      $row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC);
+      return $row;
   }
 //inserting data into sql server without returning anything back
   public static function sql_insert($tsql){
