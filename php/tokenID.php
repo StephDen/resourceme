@@ -8,18 +8,36 @@
 
 class tokenID
 {
+    /**
+     *checks if the token is valid
+     */
     public static function authenticate(){
         //checks if the signed string is valid, if not, redirect to login page
         if(encrypt::signed_string_is_valid($_COOKIE['resourcemetoken']) != true
             or !isset($_COOKIE['resourcemetoken'])){
             header('Location: login.php');
-        }else{
+        }/*elseif(){
+
+        }--Add for checking if cookie matches the server
+        */
+        else{
+            //ADD IN SQL to update last login as well as generating a new cookie
+            setcookie('resourcemetoken','SERVERtime',time()+(86400 * 30) );//time = 30days
             return;
         }
     }
 
+
+    /**
+     *hardcodes an authentication cookie to show that token system works
+     */
     public static function hardcodecookie(){
-        //hardcodes an authentication cookie to show that token system works
+        //check if setting cookies are on
+        if(!setcookie('resourcemetoken','SERVERtime',time()+(86400 * 30) )){
+            echo "<script type='text/javascript'>alert('please enable cookies');</script>";
+        }else{
+            setcookie('resourcemetoken','SERVERtime',time()+(86400 * 30) );//time = 30days
+        }
 
     }
 }
