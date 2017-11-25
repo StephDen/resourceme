@@ -58,7 +58,7 @@ tokenID::hardcodecookie();
           <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
           <p>
             <a href="#" class="btn btn-primary">Main call to action</a>
-              //changing following line to navigate to login.php (instead of href = "#")
+              <!--changing following line to navigate to login.php (instead of href = "#")-->
             <a href="login.php" class="btn btn-secondary">Secondary action</a>
           </p>
         </div>
