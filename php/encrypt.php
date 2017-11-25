@@ -15,21 +15,17 @@ class cookies
         $salt = "Simple salt";
         $checksum = sha1($string . $salt); // Any hash algorithm would work
         // return the string with the checksum at the end
-        return encrypt_string_and_encode($salt, $string . '--' . $checksum);
+        return $string . '--' . $checksum;
     }
 
     /**
      * @param $signed_string
      * @return bool|string
      */
-	public static function signed_string_is_valid($signed_string)
-    {
-        $salt = "Simple salt";
-        //decrypting the string ad then exploding
-        $decryptedString = decrypt_string_and_decode($salt, $signed_string);
-        $array = explode('--', $decryptedString);
+	public static function signed_string_is_valid($signed_string) {
+        $array = explode('--', $signed_string);
 
-        if (count($array) != 2) {
+        if(count($array) != 2) {
             // string is malformed or not signed
             return false;
         }
@@ -37,10 +33,10 @@ class cookies
         // Sign the string portion again. Should create same
         // checksum and therefore the same signed string.
         $new_signed_string = sign_string($array[0]);
-        if ($new_signed_string == $signed_string) {
-            return 'true';
+        if($new_signed_string == $signed_string) {
+            return true;
         } else {
-            return ' false';
+            return false;
         }
     }
 
