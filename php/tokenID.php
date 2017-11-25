@@ -23,7 +23,7 @@ class tokenID
         else{
             //ADD IN SQL to update last login as well as generating a new cookie
             setcookie('resourcemetoken',
-                encrypt::decrypt_string(encrypt::signtoken('SERVERtime')),
+                encrypt::encrypt_string(encrypt::signtoken('SERVERtime')),
                 time()+(86400 * 30)
             );//time = 30days
             return;
@@ -40,10 +40,10 @@ class tokenID
             echo "<script type='text/javascript'>alert('please enable cookies');</script>";
         }else{
             setcookie('resourcemetoken',
-                encrypt::decrypt_string(encrypt::signtoken('SERVERtime')),
+                encrypt::encrypt_string(encrypt::signtoken('SERVERtime')),
                 time()+(86400 * 30)
             );//time = 30days
-            $_COOKIE['resourcemetoken'] = encrypt::decrypt_string(encrypt::signtoken('SERVERtime'));
+            $_COOKIE['resourcemetoken'] = encrypt::encrypt_string(encrypt::signtoken('SERVERtime'));
         }
 
     }
