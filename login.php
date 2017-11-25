@@ -5,5 +5,11 @@
  * Date: 2017-11-25
  * Time: 2:36 PM
  */
-echo 'please log in'
+
+require_once('php/dbconnect.php');
+
+echo 'please log in';
+
+$returntext = dbconnect::sql_query('Select * FROM test');
+echo $returntext['address'][3];
 ?>

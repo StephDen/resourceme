@@ -10,22 +10,22 @@ class dbconnect {
   );
 
   //querying function
-
-    /**
-     * @param $tsql
-     * @return array|false|null
-     */
-    public static function sqlqry1($tsql){
-      $conn = sqlsrv_connect(self::$serverName,self::$connectionOptions);
-      $getResults = sqlsrv_query($conn, $tsql);
-      echo 'connected';
-      if ($getResults == FALSE){
+  public static function sql_query($tsql){
+      $conn = sqlsrv_connect(self::$serverName,self::$connectionOptions);   //connects to sql database
+      $getResults = sqlsrv_query($conn, $tsql);     //queries the database, stores returned data in a variable
+      echo 'connected';     //prints connected onto page
+      if ($getResults == FALSE){       //checks if database completes query
           echo (sqlsrv_errors());
         }
+        //turns the query results into a
       $row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC);
       return $row;
   }
-
+//inserting data into sql server without returning anything back
+  public static function sql_insert($tsql){
+      $conn = sqlsrv_connect(self::$serverName,self::$connectionOptions);
+      sqlsrv_query($conn, $tsql);
+  }
 }
 
 ?>
