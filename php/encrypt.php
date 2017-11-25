@@ -69,6 +69,8 @@ class encrypt
      * @return string
      */
     public static function decrypt_string($iv_with_string) {
+        //decoding the encryption
+        $iv_with_string = base64_decode($iv_with_string);
         // Configuration (must match encryption)
         $cipher_type = MCRYPT_RIJNDAEL_256;
         $cipher_mode = MCRYPT_MODE_CBC;
@@ -80,7 +82,7 @@ class encrypt
         $encrypted_string = substr($iv_with_string, $iv_size);
 
         $string = mcrypt_decrypt($cipher_type, $salt, $encrypted_string, $cipher_mode, $iv);
-        return base64_decode($string);
+        return $string;
     }
 
 }
