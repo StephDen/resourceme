@@ -32,7 +32,7 @@ class encrypt
 
         // Sign the string portion again. Should create same
         // checksum and therefore the same signed string.
-        $new_signed_string = sign_string($array[0]);
+        $new_signed_string = encrypt::sign_string($array[0]);
         if($new_signed_string == $signed_string) {
             return true;
         } else {
@@ -92,7 +92,7 @@ class encrypt
      */
     public static function encrypt_string_and_encode($salt, $string)
     {
-        return base64_encode(encrypt_string($salt, $string));
+        return base64_encode(encrypt::encrypt_string($salt, $string));
     }
 
 // Decode before decryption
@@ -104,7 +104,7 @@ class encrypt
      */
     public static function decrypt_string_and_decode($salt, $string)
     {
-        return decrypt_string($salt, base64_decode($string));
+        return encrypt::decrypt_string($salt, base64_decode($string));
     }
 }
 ?>
