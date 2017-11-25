@@ -13,5 +13,6 @@ echo 'please log in';
 //dbconnect::sql_query('SELECT * FROM test')
 
 $returntext = dbconnect::sql_query('Select * FROM test');
+echo count($returntext['address'])."<br />";
 echo $returntext['address'];
 ?>
