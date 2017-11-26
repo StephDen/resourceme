@@ -10,7 +10,16 @@ require_once('php/dbconnect.php');
 require_once ('php/GenerateQuery.php');
 
 echo 'please log in';
-
+if(GenerateQuery::Login($user,$pass)==true){
+    setcookie('username',
+        $user,
+        time()+(86400 * 30)
+    );//time = 30days
+    header('Location: profile.php');
+}else{//Login failed
+    $_COOKIE['username']='';
+    header('Location: index.php');
+}
 //Victor Test Code Below
 
 //dbconnect::sql_query('SELECT * FROM test')
