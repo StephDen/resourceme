@@ -5,7 +5,7 @@
  * Date: 2017-11-26
  * Time: 3:28 AM
  */
-
+    require_once ('php/tokenID.php');
     require_once('php/GenerateQuery.php');
     $array = GenerateQuery::Search();
     //$array = GenerateQuery::DisplayQuery();
