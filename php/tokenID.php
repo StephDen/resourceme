@@ -15,7 +15,6 @@ class tokenID
         //checks if the signed string is valid, if not, redirect to login page
         if(!encrypt::validatetoken(encrypt::decrypt_string($_COOKIE['resourcemetoken']))){
             echo 'decrypted:'.encrypt::decrypt_string($_COOKIE['resourcemetoken']);
-            echo 'tokenfail';
             //header('Location: login.php');
         }elseif(!isset($_COOKIE['resourcemetoken'])){
             echo 'nocookie';
@@ -46,7 +45,8 @@ class tokenID
                 encrypt::encrypt_string(encrypt::signtoken('SERVERtime')),
                 time()+(86400 * 30)
             );//time = 30days
-            $_COOKIE['resourcemetoken'] = encrypt::encrypt_string(encrypt::signtoken('SERVERtime'));
+            $_COOKIE['resourcemetoken'] = encrypt::encrypt_string('SERVERtime');
+                //encrypt::encrypt_string(encrypt::signtoken('SERVERtime'));
             echo 'encrypted:'.$_COOKIE['resourcemetoken'];
         }
     }
