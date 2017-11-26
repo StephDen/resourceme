@@ -13,13 +13,13 @@ class tokenID
      */
     public static function authenticate(){
         //checks if the signed string is valid, if not, redirect to login page
-        if(encrypt::validatetoken(encrypt::decrypt_string($_COOKIE['resourcemetoken'])) != true
-            or !isset($_COOKIE['resourcemetoken'])){
-            header('Location: login.php');
-        }/*elseif(){
+        if(!encrypt::validatetoken(encrypt::decrypt_string($_COOKIE['resourcemetoken']))){
+            echo 'tokenfail';
+            //header('Location: login.php');
+        }elseif(!isset($_COOKIE['resourcemetoken'])){
+            echo 'nocookie';
+        }//Add for checking if cookie matches the server
 
-        }--Add for checking if cookie matches the server
-        */
         else{
             //ADD IN SQL to update last login as well as generating a new cookie
             setcookie('resourcemetoken',
