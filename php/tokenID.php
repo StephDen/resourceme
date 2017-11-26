@@ -15,7 +15,7 @@ class tokenID
         //checks if the signed string is valid, if not, redirect to login page
         if(encrypt::validatetoken(encrypt::decrypt_string($_COOKIE['resourcemetoken']))!=true){
             echo 'invalid token signature';
-            header('Location: login.php');
+            //header('Location: login.php');
         }elseif(!isset($_COOKIE['resourcemetoken'])){
             echo 'nocookie';
         }else{
@@ -27,7 +27,7 @@ class tokenID
             //checking if the user exists with specific token
             if(is_null($result[0][0])){
                 echo 'blank result';
-                header('Location: login.php');
+                //header('Location: login.php');
             }else{
                 //getting server time
                 $time = time();
@@ -57,7 +57,7 @@ class tokenID
             time()+(86400 * 30)
         )){//time = 30days
             echo "<script type='text/javascript'>alert('please enable cookies');</script>";
-            header('Location: login.php');
+            //header('Location: login.php');
         }else{
             $result = 'abc';
             //getting server time
