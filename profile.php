@@ -1,5 +1,6 @@
 <?php
 //Section for including the necessary php files
+require_once('php/dbconnect.php');
 
 //--------------------------------------------
 //Start of actual code------------------------
