@@ -7,6 +7,7 @@
  */
 
 require_once('php/dbconnect.php');
+require_once ('php/GenerateQuery.php');
 
 echo 'please log in';
 
@@ -18,13 +19,13 @@ echo 'please log in';
 //echo count($returntext)."<br />";
 //echo $returntext['address'];
 
-$array = array();
+GenerateQuery::Create_New_User('Bob','123','ad1354gdfs2f4se3refaefvsfvgafbgsh');
 
-for ($i = 0; $i < 10; ++$i) {
-    $array[$i] = $i;
-}
+//$array = dbconnect::sql_query('SELECT * FROM test');
 
-for ($i = 0; $i < 10; ++$i) {
-    echo $array[$i]."<br/>";
-}
+//for ($i = 0; $i <= count($array); ++$i) {
+//    for ($j = 0; $j <= count($array); ++$j) {
+//        echo $array[$i][$j] . "<br/>";
+//    }
+//}
 ?>

@@ -39,7 +39,7 @@
           <p class="lead text-muted">Journey of a Refugee. Simplified. </p>
           <p>
             <button type=button class="btn btn-primary" data-toggle="modal" data-target="#SignInModal">Sign In</button>
-            <a href="#" class="btn btn-secondary">Register</a>
+            <button type=button class="btn btn-secondary" data-toggle="modal" data-target="#RegisterModal">Register</button>
           </p>
         </div>
       </section>
@@ -57,39 +57,15 @@
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
             </div>
             <div class="card">
-              <img src="https://static.pexels.com/photos/432812/pexels-photo-432812.jpeg" alt="Card image cap">
+              <img src="http://www.unhcr.org/thumb1/5576fd6d6.jpg" alt="Card image cap">
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
             </div>
             <div class="card">
-              <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
+              <img src="https://cdn.stocksnap.io/img-thumbs/960w/1LW59GG0WK.jpg" alt="Card image cap">
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
             </div>
 
-            <div class="card">
-              <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-            <div class="card">
-              <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-            <div class="card">
-              <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-
-            <div class="card">
-              <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-            <div class="card">
-              <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-            <div class="card">
-              <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
+            
           </div>
 
         </div>
@@ -116,7 +92,38 @@
                     <label for="inputPassword">Password</label>
                     <input type="password" class="form-control" id="inputPassword" placeholder="Enter password" name="password">
                   </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary">Sign In</button>
+                </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+        
+        <div class="modal fade" id="RegisterModal" tabindex="-1" role="dialog" aria-labelledby="RegisterModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="RegisterModalLabel">Register</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="" method="post">
+                  <div class="form-group">
+                    <label for="inputUser">Username</label>
+                    <input type="text" class="form-control" id="inputUser" placeholder="Enter username" name="username">
+                      <small class="form-text text-muted">This username will stay with you throughout your journey.</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPassword">Password</label>
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Enter password" name="password">
+                      <small class="form-text text-muted">Make sure that you keep this secure!</small>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Register</button>
                 </form>
           </div>
           <div class="modal-footer">

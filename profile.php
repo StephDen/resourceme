@@ -1,8 +1,11 @@
 <?php
 //Section for including the necessary php files
+require_once('php/dbconnect.php');
 
 //--------------------------------------------
 //Start of actual code------------------------
+
+$php_array = dbconnect::sql_query('SELECT * FROM test');
 
 ?>
 
@@ -21,9 +24,8 @@
     <link href="/css/spacing.css" rel="stylesheet">
       
   </head>
-  <body>
-
-
+    
+  <body onload="register_onload()">
     <header class="masthead clearfix">
       <div class="navbar navbar-dark bg-dark">
         <div class="container d-flex justify-content-between">
@@ -1180,5 +1182,17 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+      
+    
+    <script>
+        function register_onload(){
+        var js_array = JSON.parse( '<?php echo json_encode($php_array) ?>');
+    /*HOW to access array in JS
+    * console.log( js_array['vegetables']['leafy'][0] ); // collard greens
+    */
+        
+        document.getElementById('inputGivenName1').value = js_array[0][0];  
+    }  
+    </script>
   </body>
 </html>
