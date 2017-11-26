@@ -1511,30 +1511,31 @@ $php_array = GenerateQuery::DisplayQuery();
     /*HOW to access array in JS
     * console.log( js_array['vegetables']['leafy'][0] ); // collard greens
     */
-        //document.getElementById('inputBday1').value = js_array[0][1];
+        document.getElementById('inputBday1').value = js_array[0][1];
         document.getElementById('inputSex1').value = js_array[0][2];
         document.getElementById('inputMarital').value = js_array[0][3];
         document.getElementById('inputReligion').value = js_array[0][4];
         document.getElementById('inputNationality1').value = js_array[0][5];
-        document.getElementById('inputBcity1').value = js_array[0][7];
-        document.getElementById('inputOccupation').value = js_array[0][8];
-        document.getElementById('inputEducation').value = js_array[0][9];
-        document.getElementById('inputEthnicity').value = js_array[0][10];
-        document.getElementById('inputGivenName1').value = js_array[0][14];
-        document.getElementById('inputLastName1').value = js_array[0][15];
-        document.getElementById('inputBcountry').value = js_array[0][17];
-        document.getElementById('inputPhone1').value = js_array[0][18];
-        document.getElementById('inputEmail1').value = js_array[0][19];
-        document.getElementById('inputOGCountry').value = js_array[0][21];
-        document.getElementById('inputOGAddress').value = js_array[0][22];
-        document.getElementById('inputOGCity').value = js_array[0][23];
-        document.getElementById('inputNeeds').value = js_array[0][24];
-        document.getElementById('inputDeparture').value = js_array[0][25];
-        document.getElementById('inputArrival').value = js_array[0][26];
-        document.getElementById('inputCurCountry').value = js_array[0][27];
-        document.getElementById('inputCity').value = js_array[0][28];
-        document.getElementById('inputAddress').value = js_array[0][29];
+        document.getElementById('inputBcity1').value = js_array[0][6];
+        document.getElementById('inputOccupation').value = js_array[0][7];
+        document.getElementById('inputEducation').value = js_array[0][8];
+        document.getElementById('inputEthnicity').value = js_array[0][9];
+        document.getElementById('inputGivenName1').value = js_array[0][13];
+        document.getElementById('inputLastName1').value = js_array[0][14];
+        document.getElementById('inputBcountry').value = js_array[0][15];
+        document.getElementById('inputPhone1').value = js_array[0][17];
+        document.getElementById('inputEmail1').value = js_array[0][18];
+        document.getElementById('inputOGCountry').value = js_array[0][20];
+        document.getElementById('inputOGAddress').value = js_array[0][21];
+        document.getElementById('inputOGCity').value = js_array[0][22];
+        document.getElementById('inputNeeds').value = js_array[0][23];
+        document.getElementById('inputDeparture').value = js_array[0][24];
+        document.getElementById('inputArrival').value = js_array[0][25];
+        document.getElementById('inputCurCountry').value = js_array[0][26];
+        document.getElementById('inputCity').value = js_array[0][27];
+        document.getElementById('inputAddress').value = js_array[0][28];
         
+            
     }  
     </script>
   </body>
