@@ -745,7 +745,8 @@
      var js_array = JSON.parse( '<?php echo json_encode($array) ?>');
     
         var table = document.getElementById("dataTable");
-        var counter = 0;
+        var counter;
+        counter = 0;
         
     var html = "<tbody>";
     for (var i = 0; i < js_array.length; i++) {
@@ -758,7 +759,7 @@
         }
         html+="</tbody>";
         table.innerHTML = html;
-        counter++;
+        counter = counter+1;
     }
         console.log(counter);
         document.getElementById("myCounter").innerHTML = counter.toString();
