@@ -99,7 +99,7 @@ class GenerateQuery
         (Education_Level = '."'".$education."'".' OR ('."'".$education."'".' IS NULL)) AND
         (Country_of_Birth = '."'".$countryBirth."'".' OR('."'". $countryBirth."'".' IS NULL)) AND 
         (Country_of_Origin = '."'".$countryOG."'".' OR('."'". $countryOG."'".' IS NULL)) AND
-        (Special_Needs = '."'".$specialNeeds."'".' OR('."'". $specialNeeds."'".' IS NULL))';
+        (Special_Needs = '."'".$specialNeeds."'".' OR('."'". $specialNeeds."'".' IS NULL));';
         //} else{
            // $temp = '*';
            /* $new_sql = '
