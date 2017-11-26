@@ -625,9 +625,17 @@
            <button type="button" class="btn btn-primary">Search</button>
                     <button type="button" class="btn btn-outline-primary">Last Updated</button>
             <button type="button" class="btn btn-outline-primary">Last Login</button>
-                    <button type="button" class="btn btn-info">
-  Notify <span class="badge badge-light">4</span>
-</button>
+                    
+                    
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target=".bd-example-modal-sm">Notify<span class="badge badge-light">4</span></button>
+
+<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      Notifications sent.
+    </div>
+  </div>
+</div>
                 
                 </form>
                 
