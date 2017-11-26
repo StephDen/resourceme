@@ -6,10 +6,10 @@
  * Time: 10:07 AM
  */
 require_once('php/GenerateQuery.php');
-require_once('php/tokenID.php');
+require_once('php/encrypt.php');
 $user = htmlspecialchars($_POST["username"]);
 $pass = htmlspecialchars($_POST["password"]);
-$token = tokenID::hardcodecookie();
+$token = encrypt::encrypt_string(encrypt::signtoken('SERVERtime'));
 GenerateQuery::Create_New_User($user,$pass,$token);
 setcookie('username',
     $user,
