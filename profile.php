@@ -1514,7 +1514,7 @@ $php_array = GenerateQuery::DisplayQuery();
     * console.log( js_array['vegetables']['leafy'][0] ); // collard greens
     */
         
-        document.getElementById('inputGivenName1').value = js_array[1][0];
+        document.getElementById('inputGivenName1').value = js_array[0][1];
         
     }  
     </script>
