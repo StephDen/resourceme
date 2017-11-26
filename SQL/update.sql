@@ -51,6 +51,7 @@ UPDATE Personal_Info
 
 UPDATE (SELECT TOP 1 *
 FROM Location
+WHERE ID = @ID
 ORDER BY Date_Arrived DESC)
 SET Country = @country,
 City = @city,
