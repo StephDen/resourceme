@@ -14,13 +14,10 @@ class tokenID
     public static function authenticate(){
         //checks if the signed string is valid, if not, redirect to login page
         if(!encrypt::validatetoken(encrypt::decrypt_string($_COOKIE['resourcemetoken']))){
-            echo 'decrypted:'.encrypt::decrypt_string($_COOKIE['resourcemetoken']);
-            //header('Location: login.php');
+            header('Location: login.php');
         }elseif(!isset($_COOKIE['resourcemetoken'])){
             echo 'nocookie';
-        }//Add for checking if cookie matches the server
-
-        else{
+        }else{
             //ADD IN SQL to update last login as well as generating a new cookie
             setcookie('resourcemetoken',
                 encrypt::encrypt_string(encrypt::signtoken('SERVERtime')),
@@ -45,9 +42,7 @@ class tokenID
                 encrypt::encrypt_string(encrypt::signtoken('SERVERtime')),
                 time()+(86400 * 30)
             );//time = 30days
-            $_COOKIE['resourcemetoken'] = encrypt::encrypt_string('SERVERtime');
-                //encrypt::encrypt_string(encrypt::signtoken('SERVERtime'));
-            echo 'encrypted:'.$_COOKIE['resourcemetoken']."<br/>";;
+            $_COOKIE['resourcemetoken'] = encrypt::encrypt_string(encrypt::signtoken('SERVERtime'));
         }
     }
 }
