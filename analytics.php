@@ -61,7 +61,7 @@
             <P>We've compiled general statistics about the current refugee situation worldwide, based off of real-time information.</P>
             <div class="album container" style="padding-top: 3rem; padding-bottom: 3rem; padding-left: 3rem; padding-right: 3rem">
                 <h4>Filters</h4><hr>
-                <form>
+                <form action="">
                     <div class="row">
                         <div class="form-group col">
                 <label for="inputSex1">Sex</label>
@@ -625,9 +625,17 @@
            <button type="button" class="btn btn-primary">Search</button>
                     <button type="button" class="btn btn-outline-primary">Last Updated</button>
             <button type="button" class="btn btn-outline-primary">Last Login</button>
-                    <button type="button" class="btn btn-info">
-  Notify <span class="badge badge-light">4</span>
-</button>
+                    
+                    
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target=".bd-example-modal-sm">Notify <span class="badge badge-light">4</span></button>
+
+<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content container">
+      <p><br>Notifications sent.</p>
+    </div>
+  </div>
+</div>
                 
                 </form>
                 
