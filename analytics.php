@@ -738,8 +738,7 @@
     <script>
         
     function analytics_onload(){
-        $('#govModal').modal("show")
-    }      
+        $('#govModal').modal("show")      
         
      var js_array = JSON.parse( '<?php echo json_encode($array) ?>');
         
@@ -754,7 +753,7 @@
         }
         html+="</tbody>";
         document.getElementById("dataTable").innerHTML = html;
-    
+    }
     </script>
       
       
