@@ -22,7 +22,7 @@ class GenerateQuery
     Public Static Function Login($user,$pass){
         $new_tsql = 'SELECT ID FROM Personal_Info WHERE ID ='."'".$user."'".' AND Password = '."'".$pass."'".';';
         $temp_array = dbconnect::sql_query($new_tsql);
-        echo $temp_array[0][0];
+        echo "not blank".$temp_array[0][0];
         if(is_null($temp_array[0][0])){
             return 'false';
         }
