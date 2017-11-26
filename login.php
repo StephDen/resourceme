@@ -20,8 +20,8 @@ echo 'please log in';
 
 $array = dbconnect::sql_query('SELECT * FROM test');
 
-for ($i = 0; $i < count($array); ++$i) {
-    for ($j = 0; $j < count($array); ++$j) {
+for ($i = 0; $i <= count($array); ++$i) {
+    for ($j = 0; $j <= count($array); ++$j) {
         echo $array[$i][$j] . "<br/>";
     }
 }

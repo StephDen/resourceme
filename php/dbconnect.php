@@ -27,7 +27,7 @@ class dbconnect {
       $i = 0;
       while( $row = sqlsrv_fetch_array( $getResults, SQLSRV_FETCH_NUMERIC) ) {
           $j = 0;
-          while ($j < count($row)){
+          while ($j <= count($row)){
               $CurrentArray[$i][$j] = $row[$j];
               ++$j;
           }
