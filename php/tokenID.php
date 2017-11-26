@@ -22,7 +22,7 @@ class tokenID
             $result = dbconnect::sql_query(
                 'SELECT ID
                       FROM Personal_Info
-                      WHERE Token ='.$_COOKIE['resourcemetoken'].';'
+                      WHERE Token ='.$_COOKIE['resourcetoken'].';'
             );
             //checking if the user exists with specific token
             if(is_null($result[0][0])){
@@ -38,7 +38,7 @@ class tokenID
                         WHERE ID ='.$result[0][0].' ; '
                 );
                 //ADD IN SQL to update last login as well as generating a new cookie
-                setcookie('resourcemetoken',
+                setcookie('resourcetoken',
                     $encrypted_string,
                     time()+(86400 * 30)
                 );//time = 30days
@@ -62,10 +62,11 @@ class tokenID
             $result = 'abc';
             //getting server time
             $time = time();
-            $encrypted_string = encrypt::encrypt_string($time);
+            $encrypted_string1= encrypt::encrypt_string($time);
+            $encrypted_string = encrypt::encrypt_string(encrypt::signtoken($time));
             dbconnect::sql_insert(
                 'UPDATE Personal_Info
-                        SET Last_Login='.$time.',Token ='.$encrypted_string.'
+                        SET Last_Login='.$time.',Token ='.$encrypted_string1.'
                         WHERE ID ='.$result.' ; '
             );
             //ADD IN SQL to update last login as well as generating a new cookie
@@ -73,7 +74,12 @@ class tokenID
                 $encrypted_string,
                 time()+(86400 * 30)
             );//time = 30days
+            setcookie('resourcetoken',
+                $encrypted_string,
+                time()+(86400 * 30)
+            );//time = 30days
             $_COOKIE['resourcemetoken']=$encrypted_string;
+            $_COOKIE['resourcetoken'] = $encrypted_string1;
         }
     }
 }
