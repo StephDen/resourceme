@@ -615,6 +615,15 @@
     <input class="form-check-input" type="checkbox" value="" name="specialNeedsSearch">Special Needs
   </label>
 </div>          
+                    
+                    <button type="button" class="btn btn-outline-primary">Last Updated</button>
+            <button type="button" class="btn btn-outline-primary">Last Login</button>
+             <div class="form-group col-md-3">
+                                <label for="inputDeparture">Filter From</label>
+                <input type="date" class="form-control" id="inputDeparture" name="departureDate">
+        </div>
+            
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
                     <input class="btn btn-primary" type="submit" value="Submit">
                 
                 </form>
