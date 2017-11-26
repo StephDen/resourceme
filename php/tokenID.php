@@ -14,15 +14,33 @@ class tokenID
     public static function authenticate(){
         //checks if the signed string is valid, if not, redirect to login page
         if(encrypt::validatetoken(encrypt::decrypt_string($_COOKIE['resourcemetoken']))!=true){
-            header('Location: login.php');
+            header('Location: index.php');
         }elseif(!isset($_COOKIE['resourcemetoken'])){
             echo 'nocookie';
         }else{
-            //ADD IN SQL to update last login as well as generating a new cookie
-            setcookie('resourcemetoken',
-                encrypt::encrypt_string(encrypt::signtoken('SERVERtime')),
-                time()+(86400 * 30)
-            );//time = 30days
+            $result = dbconnect::sql_query(
+                'SELECT ID
+                      FROM Personal_Info
+                      WHERE Token ='.$_COOKIE['resourcemetoken'].';'
+            );
+            //checking if the user exists with specific token
+            if(is_null($result[0][0])){
+                header('Location: index.php');
+            }else{
+                //getting server time
+                $time = time();
+                $encrypted_string = encrypt::encrypt_string(encrypt::signtoken($time));
+                dbconnect::sql_insert(
+                    'UPDATE Personal_Info
+                        SET Last_Login='.$time.',Token ='.$encrypted_string.'
+                        WHERE ID ='.$result[0][0].' ; '
+                );
+                //ADD IN SQL to update last login as well as generating a new cookie
+                setcookie('resourcemetoken',
+                    $encrypted_string,
+                    time()+(86400 * 30)
+                );//time = 30days
+            }
             return;
         }
     }
@@ -37,12 +55,22 @@ class tokenID
             time()+(86400 * 30)
         )){//time = 30days
             echo "<script type='text/javascript'>alert('please enable cookies');</script>";
+            header('Location: index.php');
         }else{
+            $result = 'abc';
+            //getting server time
+            $time = time();
+            $encrypted_string = encrypt::encrypt_string(encrypt::signtoken($time));
+            dbconnect::sql_insert(
+                'UPDATE Personal_Info
+                        SET Last_Login='.$time.',Token ='.$encrypted_string.'
+                        WHERE ID ='.$result.' ; '
+            );
+            //ADD IN SQL to update last login as well as generating a new cookie
             setcookie('resourcemetoken',
-                encrypt::encrypt_string(encrypt::signtoken('SERVERtime')),
+                $encrypted_string,
                 time()+(86400 * 30)
             );//time = 30days
-            $_COOKIE['resourcemetoken'] = encrypt::encrypt_string(encrypt::signtoken('SERVERtime'));
         }
     }
 }
