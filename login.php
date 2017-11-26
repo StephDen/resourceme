@@ -10,6 +10,8 @@ require_once('php/dbconnect.php');
 
 echo 'please log in';
 
+//Victor Test Code Below
+
 //dbconnect::sql_query('SELECT * FROM test')
 
 $returntext = dbconnect::sql_query('Select * FROM test');
