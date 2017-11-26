@@ -3,13 +3,15 @@
 require_once('php/dbconnect.php');
 require_once('php/encrypt.php');
 require_once ('php/tokenID.php');
+require_once('php/GenerateQuery.php');
+
 tokenID::hardcodecookie();
 tokenID::authenticate();
 ///////////////////////////////////
 //--------------------------------------------
 //Start of actual code------------------------
 
-$php_array = dbconnect::sql_query('SELECT * FROM test');
+$php_array = GenerateQuery::DisplayQuery();
 
 ?>
 
@@ -1512,7 +1514,8 @@ $php_array = dbconnect::sql_query('SELECT * FROM test');
     * console.log( js_array['vegetables']['leafy'][0] ); // collard greens
     */
         
-        document.getElementById('inputGivenName1').value = js_array[0][0];  
+        document.getElementById('inputGivenName1').value = js_array[14];
+        
     }  
     </script>
   </body>
