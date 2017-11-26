@@ -6,7 +6,7 @@
  * Time: 12:16 AM
  */
 
-require_Once('php/dbconnect.php');
+require_once('php/dbconnect.php');
 
 class GenerateQuery
 {
