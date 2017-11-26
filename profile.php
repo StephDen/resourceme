@@ -79,7 +79,7 @@ $php_array = GenerateQuery::DisplayQuery();
             <div class = "row">
             <div class="form-group col">
                 <label for="inputSex1">Sex</label>
-                <select type="text" class="form-control" id="inputSex" name="sex">
+                <select type="text" class="form-control" id="inputSex1" name="sex">
                     <option selected></option>
                     <option>Male</option>
                     <option>Female</option>
@@ -1512,10 +1512,10 @@ $php_array = GenerateQuery::DisplayQuery();
     /*HOW to access array in JS
     * console.log( js_array['vegetables']['leafy'][0] ); // collard greens
     */
-        document.getElementById('inputBday1').value = js_array[0][1];
+        //document.getElementById('inputBday1').value = js_array[0][1];
         document.getElementById('inputSex1').value = js_array[0][2];
         document.getElementById('inputMarital').value = js_array[0][3];
-        document.getElementById('inputBday1').value = js_array[0][4];
+        //document.getElementById('inputBday1').value = js_array[0][4];
         document.getElementById('inputReligion').value = js_array[0][5];
         document.getElementById('inputGivenName1').value = js_array[0][14];
             
