@@ -40,7 +40,7 @@ $php_array = GenerateQuery::DisplayQuery();
               <nav class="nav nav-masthead">
                 <a class="nav-link" href="/index.php">Home</a>
                 <a class="nav-link active" href="#">Profile</a>
-                <a class="nav-link" href="#">Analytics</a>
+                <a class="nav-link" href="/analytics.php">Analytics</a>
               </nav>
             </div>
         </div>
@@ -1514,7 +1514,7 @@ $php_array = GenerateQuery::DisplayQuery();
     * console.log( js_array['vegetables']['leafy'][0] ); // collard greens
     */
         
-        document.getElementById('inputGivenName1').value = js_array[14];
+        document.getElementById('inputGivenName1').value = js_array[0][0];
         
     }  
     </script>
