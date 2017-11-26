@@ -6,4 +6,8 @@
  * Time: 3:28 AM
  */
 
+    require_once('php/GenerateQuery.php');
+
+    $array = GenerateQuery::DisplayQuery();
+    
 ?>
