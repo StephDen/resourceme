@@ -15,9 +15,9 @@ class tokenID
         //checks if the signed string is valid, if not, redirect to login page
         if(encrypt::validatetoken(encrypt::decrypt_string($_COOKIE['resourcemetoken']))!=true){
 
-            header('Location: login.php');
+            header('Location: index.php');
         }elseif(!isset($_COOKIE['resourcemetoken'])){
-            header('Location: login.php');
+            header('Location: index.php');
         }else{
             /*$result = dbconnect::sql_query(
                 'SELECT ID
@@ -57,7 +57,7 @@ class tokenID
             time()+(86400 * 30)
         )){//time = 30days
             echo "<script type='text/javascript'>alert('please enable cookies');</script>";
-            header('Location: login.php');
+            header('Location: index.php');
         }else{
             $result = 'abc';
             //getting server time

@@ -1,14 +1,3 @@
-<?php
-//Section for including the necessary php files
-require_once('php/dbconnect.php');
-
-//--------------------------------------------
-//Start of actual code------------------------
-
-$php_array = dbconnect::sql_query('SELECT * FROM test');
-
-?>
-
 <html lang="en">
   <head>
     <title>ResourceMe</title>
@@ -25,7 +14,7 @@ $php_array = dbconnect::sql_query('SELECT * FROM test');
       
   </head>
     
-  <body onload="register_onload()">
+  <body>
     <header class="masthead clearfix">
       <div class="navbar navbar-dark bg-dark">
         <div class="container d-flex justify-content-between">
@@ -54,7 +43,7 @@ $php_array = dbconnect::sql_query('SELECT * FROM test');
         </div>
         
         <div class="container">
-        <h1>The Situation</h1>
+        <h1>Refugee Movements</h1>
         </div>
 
     </main>

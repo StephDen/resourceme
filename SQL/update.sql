@@ -19,6 +19,8 @@ DECLARE @email char (50);
 DECLARE @country_of_origin char (40);
 DECLARE @city_of_origin char (40);
 DECLARE @address_of_origin char (60);
+DECLARE @special_needs varchar(max);
+DECLARE @depature_date date;
 
 UPDATE Personal_Info
  SET Date_of_Birth = @date_of_birth,
@@ -42,7 +44,9 @@ UPDATE Personal_Info
     Email = @email,
     Country_of_Origin = @country_of_origin,
     City_of_Origin = @city_of_origin,
-    Address_of_Origin = @address_of_origin
+    Address_of_Origin = @address_of_origin,
+    Special_Needs = @special_needs,
+    Depature_Date = @depature_date
 ;
 
 UPDATE Location
