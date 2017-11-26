@@ -70,19 +70,19 @@ UPDATE Personal_Info
     City_of_Origin = '."'".$cityOrigin."'".',
     Address_of_Origin = '."'".$address1Origin."'".',
     Special_Needs = '."'".$special_needs."'".',
-    Depature_Date = '."'".$departureDate."'".' WHERE ID = '."'".$_COOKIE['Username']."'".';';
+    Depature_Date = '."'".$departureDate."'".' WHERE ID = '."'".$_COOKIE['username']."'".';';
 
     dbconnect::sql_insert($new_tsql);
 
 //address 2?
 
-    $new_tsql = '
+    /*$new_tsql = '
       UPDATE (SELECT TOP 1 *
       FROM Location
       ORDER BY Date_Arrived DESC)
       SET Country = '."'".$country."'".',
       City = '."'".$city."'".',
       Street_Address = '."'".$address1."'".';';
-    dbconnect::sql_insert($new_tsql);
+    dbconnect::sql_insert($new_tsql);*/
 header('Location: profile.php');
 ?>
