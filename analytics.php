@@ -656,7 +656,9 @@
                         <th scope="col">Current Country</th>
                     </tr>    
                 </thead>
-                    <div id="dataTable"></div>  
+                <tbody id="dataTable">
+                    
+                </tbody>
                 </table>        
         
               
@@ -741,6 +743,8 @@
         $('#govModal').modal("show");      
         
      var js_array = JSON.parse( '<?php echo json_encode($array) ?>');
+    
+        var table = document.getElementById("dataTable");
         
     var html = "<tbody>";
     for (var i = 0; i < js_array.length; i++) {
@@ -752,7 +756,7 @@
 
         }
         html+="</tbody>";
-        document.getElementById("dataTable").innerHTML = html;
+        table.innerHTML = html;
     }
     </script>
       
