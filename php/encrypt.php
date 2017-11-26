@@ -57,7 +57,7 @@ class encrypt
         $iv =  mcrypt_create_iv($iv_size, MCRYPT_RAND);
 
         $encrypted_string = mcrypt_encrypt($cipher_type, $salt, $string, $cipher_mode, $iv);
-
+        echo $encrypted_string."<br/>";
         // Return initialization vector + encrypted string
         // We'll need the $iv when decoding.
         $string = base64_encode($iv . $encrypted_string);
