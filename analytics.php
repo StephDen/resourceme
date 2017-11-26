@@ -9,5 +9,5 @@
     require_once('php/GenerateQuery.php');
 
     $array = GenerateQuery::DisplayQuery();
-    
+
 ?>

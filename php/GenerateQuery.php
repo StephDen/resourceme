@@ -67,7 +67,6 @@ class GenerateQuery
             Phone,
             Email,
             Password,
-            Token,
             Country_of_Origin,
             Address_of_Origin,
             City_of_Origin,
