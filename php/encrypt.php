@@ -60,7 +60,8 @@ class encrypt
 
         // Return initialization vector + encrypted string
         // We'll need the $iv when decoding.
-        return base64_encode($iv . $encrypted_string);
+        $string = base64_encode($iv . $encrypted_string);
+        return $string;
     }
 
     /**
