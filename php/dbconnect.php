@@ -16,8 +16,9 @@ class dbconnect {
       $conn = sqlsrv_connect(self::$serverName,self::$connectionOptions);   //connects to sql database
       $getResults = sqlsrv_query($conn, $tsql);     //queries the database, stores returned data in a variable
 
-      if ($getResults == FALSE){       //checks if database completes query
-          echo (sqlsrv_errors());
+      if ($getResults == FALSE){
+          $error = sqlsrv_errors(); //checks if database completes query
+          echo $error[0][0];
         }
         //turns the query results into an array
       //commented section loops through each entry and prints it, remove @row and return part once working
