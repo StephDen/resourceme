@@ -76,13 +76,13 @@ UPDATE Personal_Info
 
 //address 2?
 
-    $new_tsql = '
+    /*$new_tsql = '
       UPDATE (SELECT TOP 1 *
       FROM Location
       ORDER BY Date_Arrived DESC)
       SET Country = '."'".$country."'".',
       City = '."'".$city."'".',
       Street_Address = '."'".$address1."'".';';
-    dbconnect::sql_insert($new_tsql);
+    dbconnect::sql_insert($new_tsql);*/
 header('Location: profile.php');
 ?>
