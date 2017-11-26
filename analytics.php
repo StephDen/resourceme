@@ -745,8 +745,8 @@
      var js_array = JSON.parse( '<?php echo json_encode($array) ?>');
     
         var table = document.getElementById("dataTable");
-        var counter;
-        counter = 0; 
+        var counterECCC;
+        counterECCC = 0; 
         
     var html = "<tbody>";
     for (var i = 0; i < js_array.length; i++) {
@@ -759,10 +759,10 @@
         }
         html+="</tbody>";
         table.innerHTML = html;
-        counter = counter+1;
+        counterECCC = counterECCC+1;
     }
-        console.log(counter.toString);
-        document.getElementById("myCounter").innerHTML = counter.toString;
+        console.log(counterECCC.toString);
+        document.getElementById("myCounter").innerHTML = counterECCC.toString;
     </script>
       
       
