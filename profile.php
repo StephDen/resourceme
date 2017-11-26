@@ -1176,7 +1176,8 @@ $php_array = GenerateQuery::DisplayQuery();
     <label for="inputNeeds1">Needs / Accomodations</label>
     <textarea class="form-control" id="inputNeeds1" rows="3" id="inputNeeds" name="special_needs"></textarea>
   </div>
-                        
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+            
         </form>   
             
             

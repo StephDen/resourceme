@@ -624,7 +624,6 @@
         </div>
             
             <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
-                    <input class="btn btn-primary" type="submit" value="Submit">
                 
                 </form>
                 
