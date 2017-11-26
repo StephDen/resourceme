@@ -908,8 +908,8 @@ $php_array = GenerateQuery::DisplayQuery();
       <input type="text" class="form-control" id="inputOGCity" name="cityOrigin">
     </div>
       <div class="form-group col-md-3">
-      <label for="inputState">Country</label>
-      <select id="inputState" class="form-control" id="inputOGCountry" name="countryOrigin">
+      <label for="inputOGCountry">Country</label>
+      <select id="inputOGCountry" class="form-control" name="countryOrigin">
             <option> </option>
             <option value="AF">Afghanistan</option>
             <option value="AX">Åland Islands</option>
