@@ -96,7 +96,7 @@ $php_array = GenerateQuery::DisplayQuery();
                 </div>
                 <div class="form-group col">
                     <label for="inputBcountry">Country of Birth</label>
-                <select id="inputBcountry" class="form-control" name="Bcountry">
+                <select id="inputBcountry" class="form-control" id="inputBcountry" name="Bcountry">
             <option> </option>
             <option value="AF">Afghanistan</option>
             <option value="AX">Åland Islands</option>
@@ -350,8 +350,8 @@ $php_array = GenerateQuery::DisplayQuery();
 </select>
                 </div>
             <div class="form-group col">
-                <label for="inputLastName1">Nationality</label>
-                <select type="text" class="form-control" id="inputLastName1" name="nationality">
+                <label for="inputNationality1">Nationality</label>
+                <select type="text" class="form-control" id="inputNationality1" name="nationality">
                     <option selected> </option>
                     <option value="afghan">Afghan</option>
                     <option value="albanian">Albanian</option>
@@ -588,7 +588,7 @@ $php_array = GenerateQuery::DisplayQuery();
     </div>
       <div class="form-group col-md-3">
       <label for="inputState">Country</label>
-      <select id="inputState" class="form-control" name="country">
+      <select id="inputState" class="form-control" id="inputCurCountry" name="country">
           <option> </option>
             <option value="AF">Afghanistan</option>
             <option value="AX">Åland Islands</option>
@@ -893,7 +893,7 @@ $php_array = GenerateQuery::DisplayQuery();
             <div class = "row">
                 <div class="form-group col-md-8">
     <label for="inputAddress">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="address1Origin">
+    <input type="text" class="form-control" id="inputOGAddress" placeholder="1234 Main St" name="address1Origin">
   </div>
   <div class="form-group col">
     <label for="inputAddress2">Unit Number</label>
@@ -905,11 +905,11 @@ $php_array = GenerateQuery::DisplayQuery();
       
     <div class="form-group col-md-4">
       <label for="inputCity">City</label>
-      <input type="text" class="form-control" id="inputCity" name="cityOrigin">
+      <input type="text" class="form-control" id="inputOGCity" name="cityOrigin">
     </div>
       <div class="form-group col-md-3">
       <label for="inputState">Country</label>
-      <select id="inputState" class="form-control" name="countryOrigin">
+      <select id="inputState" class="form-control" id="inputOGCountry" name="countryOrigin">
             <option> </option>
             <option value="AF">Afghanistan</option>
             <option value="AX">Åland Islands</option>
@@ -1174,7 +1174,7 @@ $php_array = GenerateQuery::DisplayQuery();
             
             <div class="form-group">
     <label for="inputNeeds1">Needs / Accomodations</label>
-    <textarea class="form-control" id="inputNeeds1" rows="3" name="special_needs"></textarea>
+    <textarea class="form-control" id="inputNeeds1" rows="3" id="inputNeeds" name="special_needs"></textarea>
   </div>
             
             <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
@@ -1515,44 +1515,26 @@ $php_array = GenerateQuery::DisplayQuery();
         //document.getElementById('inputBday1').value = js_array[0][1];
         document.getElementById('inputSex1').value = js_array[0][2];
         document.getElementById('inputMarital').value = js_array[0][3];
-        //document.getElementById('inputBday1').value = js_array[0][4];
-        document.getElementById('inputReligion').value = js_array[0][5];
+        document.getElementById('inputReligion').value = js_array[0][4];
+        document.getElementById('inputNationality1').value = js_array[0][5];
+        document.getElementById('inputBcity1').value = js_array[0][7];
+        document.getElementById('inputOccupation').value = js_array[0][8];
+        document.getElementById('inputEducation').value = js_array[0][9];
+        document.getElementById('inputEthnicity').value = js_array[0][10];
         document.getElementById('inputGivenName1').value = js_array[0][14];
-            
-            /*
-            
-            
-            1 Date_of_Birth,
-            2 Sex, 
-            3 Marital_Status,
-            4 Religion, 
-            5Citizenship,
-            6Photograph,
-            7Place_of_Birth,
-            8Occupation,
-            9Education_Level,
-            10Ethnic_Origin,
-            11Last_Updated,
-            12Updated_By,
-            13Last_Login,
-            14First_Name,
-            15Last_Name,
-            16Active_Status,
-            17Country_of_Birth,
-            18Phone,
-            19Email,
-            20Password,
-            21Country_of_Origin,
-            22Address_of_Origin,
-            23City_of_Origin,
-            24Special_Needs,
-            25Depature_Date,
-            26Date_Arrived,
-            27Country,
-            28City,
-            29Street_Address
-            
-            */
+        document.getElementById('inputLastName1').value = js_array[0][15];
+        document.getElementById('inputBcountry').value = js_array[0][17];
+        document.getElementById('inputPhone1').value = js_array[0][18];
+        document.getElementById('inputEmail1').value = js_array[0][19];
+        document.getElementById('inputOGCountry').value = js_array[0][21];
+        document.getElementById('inputOGAddress').value = js_array[0][22];
+        document.getElementById('inputOGCity').value = js_array[0][23];
+        document.getElementById('inputNeeds').value = js_array[0][24];
+        document.getElementById('inputDeparture').value = js_array[0][25];
+        document.getElementById('inputArrival').value = js_array[0][26];
+        document.getElementById('inputCurCountry').value = js_array[0][27];
+        document.getElementById('inputCity').value = js_array[0][28];
+        document.getElementById('inputAddress').value = js_array[0][29];
         
     }  
     </script>
