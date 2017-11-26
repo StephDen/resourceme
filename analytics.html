@@ -354,8 +354,8 @@
         Please authenticate your credentials as an authorized NGO, government, or UNHCR officer. 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success">Confirm</button>
+        <a class="btn btn-secondary" href="/index.php">Close</a>
+        <button type="button" class="btn btn-success" data-dismiss="modal">Confirm</button>
       </div>
     </div>
   </div>
@@ -384,10 +384,13 @@
     <script>
         
     function analytics_onload(){
-        $('#govModal').modal(option)
+        $('#govModal').modal("show")
+        console.log("HI!")
     }      
     
-        
+    </script>
+    
+    <script>
     var html = "<table class="table table-sm table-hover"><thead>";
     for (var i = 0; i < rows.length; i++) {
         html+="<tr>";

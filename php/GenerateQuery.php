@@ -39,8 +39,8 @@ class GenerateQuery
         $countrya = htmlspecialchars($_POST["countrya"]);
         $postalCodea = htmlspecialchars($_POST["postalCodea"]);
         $arrivalDatea = htmlspecialchars($_POST["arrivalDatea"]);
-
-
+        //(ID,DateArrived,Country,)
+        $new_tsql = 'Insert Location values('."'".$_COOKIE['username']."'".','."'".)'
 
     }
 
