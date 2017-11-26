@@ -1,7 +1,8 @@
 --Code for creating tables just in case
 CREATE TABLE Personal_Info(
     ID char(16) Not Null,
-    Full_Name char(50),
+    First_Name char(20),
+    Last_Name char(20),
     Date_of_Birth Date,
     Sex char(15),
     Marital_Status char(15),

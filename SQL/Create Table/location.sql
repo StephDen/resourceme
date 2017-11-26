@@ -5,5 +5,5 @@ CREATE TABLE Location(
     Country char(30),
     City char(30),
     Street_Address text,
-    Primary Key(ID)
+    Foreign Key(ID) References Personal_Info(ID)
 );
