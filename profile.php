@@ -1177,6 +1177,13 @@ $php_array = GenerateQuery::DisplayQuery();
     <textarea class="form-control" id="inputNeeds1" rows="3" id="inputNeeds" name="special_needs"></textarea>
   </div>
             
+            <button type="button" class="btn btn-outline-primary">Last Updated</button>
+            <button type="button" class="btn btn-outline-primary">Last Login</button>
+             <div class="form-group col-md-3">
+                                <label for="inputDeparture">Filter From</label>
+                <input type="date" class="form-control" id="inputDeparture" name="departureDate">
+        </div>
+            
             <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
             
         </form>   
