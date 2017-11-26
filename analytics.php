@@ -646,8 +646,8 @@
                     <tr>
                         <th scope="col">Given Names</th>
                         <th scope="col">Family Name</th>
-                        <th scope="col">Email</th>
                         <th scope="col">Phone</th>
+                        <th scope="col">Email</th>
                         <th scope="col">Sex</th>
                         <th scope="col">Marital Status</th>
                         <th scope="col">Education</th>
@@ -656,7 +656,7 @@
                         <th scope="col">Current Country</th>
                     </tr>    
                 </thead>
-                <tbody id="dataTable">
+                <tbody id="dataTable" style="font-size: 10">
                     
                 </tbody>
                 </table>        
