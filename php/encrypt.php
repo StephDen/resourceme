@@ -71,7 +71,9 @@ class encrypt
      */
     public static function decrypt_string($iv_with_string) {
         //decoding the encryption
+        echo $iv_with_string."<br/>";
         $string = base64_decode($iv_with_string);
+        echo $string."<br/>";
         // Configuration (must match encryption)
         $cipher_type = MCRYPT_RIJNDAEL_256;
         $cipher_mode = MCRYPT_MODE_CBC;
