@@ -13,7 +13,9 @@ class dbconnect {
   public static function sql_query($tsql){
       $conn = sqlsrv_connect(self::$serverName,self::$connectionOptions);   //connects to sql database
       $getResults = sqlsrv_query($conn, $tsql);     //queries the database, stores returned data in a variable
-      echo 'connected';     //prints connected onto page
+      echo 'connected'."<br/>";     //prints connected onto page
+      echo $getResults."<br/>"
+      
       if ($getResults == FALSE){       //checks if database completes query
           echo (sqlsrv_errors());
         }
