@@ -44,8 +44,41 @@ $cityOrigin = htmlspecialchars($_POST["cityOrigin"]);
 $countryOrigin = htmlspecialchars($_POST["countryOrigin"]);
 $postalCodeOrigin = htmlspecialchars($_POST["postalCodeOrigin"]);
 $departureDate = htmlspecialchars($_POST["departureDate"]);
+$LastUpdated = time();
+$special_needs = htmlspecialchars($_POST["special_needs"]);
 
+$new_tsql = '
+UPDATE Personal_Info
+ SET Date_of_Birth = '."'".$birthday."'".',
+    Sex = '."'".$sex."'".',
+    Marital_Status = '."'".$maritalStatus."'".',
+    Religion = '."'".$religion."'".',
+    Citizenship = '."'".$nationality."'".',
+    Photograph = '."'".$photo."'".',
+    Place_of_Birth = '."'".$Bcity."'".',
+    Occupation = '."'".$occupation."'".',
+    Education_Level = '."'",$education."'".',
+    Ethnic_Origin = '."'".$ethnicity."'".',
+    Last_Updated = '."'".LastUpdated."'".',
+    Updated_By = '."'".$_COOKIE['Username']."'".',
+    Last_Login = '."'".$LastUpdated."'".',
+    First_Name = '."'".givenName."'".',
+    Last_Name = '."'".$lastName."'".',
+    Active_Status = 1,
+    Country_of_Birth = '."'".$Bcountry."'".',
+    Phone = '."'".$tel."'".',
+    Email = '."'".$email."'".',
+    Country_of_Origin = '."'".$countryOrigin."'".',
+    City_of_Origin = '."'".$cityOrigin."'".',
+    Address_of_Origin = '."'".$address1Origin."'".',
+    Special_Needs = '."'".$special_needs."'".',
+    Depature_Date = '."'".$departureDate."'".' WHERE ID = '."'".$_COOKIE['Username']."'".';';
 
+UPDATE Location
+SET Country = @country,
+City = @city,
+Street_Address = @street_address
+;
 
 //$tsql = ;
 ?>

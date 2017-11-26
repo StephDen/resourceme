@@ -34,4 +34,18 @@ class GenerateQuery
 
 
 
+
+    Public Static Function UpdateNewLocation(){
+        $address1a = htmlspecialchars($_POST["address1a"]);
+        $address2a = htmlspecialchars($_POST["address2a"]);
+        $citya = htmlspecialchars($_POST["citya"]);
+        $countrya = htmlspecialchars($_POST["countrya"]);
+        $postalCodea = htmlspecialchars($_POST["postalCodea"]);
+        $arrivalDatea = htmlspecialchars($_POST["arrivalDatea"]);
+
+
+
+    }
+
+
 }
