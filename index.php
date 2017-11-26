@@ -6,6 +6,11 @@ require_once ('php/tokenID.php');
 tokenID::hardcodecookie();
 tokenID::authenticate();
 ///////////////////////////////////
+/*HOW TO TURN PHP array into JS array
+ * var js_array = JSON.parse( '<?php echo json_encode($php_array) ?>' );
+ * HOW TO REFERENCE JS ARRAY
+ * console.log( js_array['vegetables']['leafy'][0] ); // collard greens
+ * */
 ?>
 <html lang="en">
   <head>

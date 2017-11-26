@@ -37,6 +37,7 @@ class dbconnect {
           echo (sqlsrv_errors());
       }
   }
+
 }
 
 ?>
