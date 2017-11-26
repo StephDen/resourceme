@@ -651,9 +651,9 @@
                         <th scope="col">Sex</th>
                         <th scope="col">Marital Status</th>
                         <th scope="col">Education</th>
-                        <th scope="col">Needs</th>
-                        <th scope="col">Country of Origin</th>
                         <th scope="col">Current Country</th>
+                        <th scope="col">Country of Origin</th>
+                        <th scope="col">Needs</th>
                     </tr>    
                 </thead>
                 <tbody id="dataTable" style="font-size: 10">
