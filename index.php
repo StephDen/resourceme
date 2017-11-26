@@ -62,7 +62,7 @@
             </div>
             <div class="card">
               <img src="http://www.unhcr.org/thumb1/5576fd6d6.jpg" alt="Card image cap">
-              <p class="card-text">Upon arrival at a refugee camp or contact with officials hosting refugees, the process becomes more streamlined so that you can receive support and resources as soon as possible.</p>
+              <p class="card-text">Upon arrival at a refugee camp or on contact with officials hosting refugees, the process becomes more streamlined so that you can receive support and resources as soon as possible.</p>
             </div>
             <div class="card">
               <img src="https://cdn.stocksnap.io/img-thumbs/960w/1LW59GG0WK.jpg" alt="Card image cap">

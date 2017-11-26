@@ -33,12 +33,12 @@ $php_array = dbconnect::sql_query('SELECT * FROM test');
     <header class="masthead clearfix">
       <div class="navbar navbar-dark bg-dark">
         <div class="container d-flex justify-content-between">
-            <a href="#" class="navbar-brand"><!--<img src="images/logo.png" style="height:45px;">--><b>Resource</b>Me</a>
+            <a href="/index.php" class="navbar-brand"><!--<img src="images/logo.png" style="height:45px;">--><b>Resource</b>Me</a>
             <div class="inner">
               <nav class="nav nav-masthead">
                 <a class="nav-link" href="/index.php">Home</a>
                 <a class="nav-link active" href="#">Profile</a>
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="#">Analytics</a>
               </nav>
             </div>
         </div>
@@ -51,7 +51,7 @@ $php_array = dbconnect::sql_query('SELECT * FROM test');
         
         <nav aria-label="breadcrumb" role="navigation">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="/index.php">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Profile</li>
             </ol>
         </nav>
