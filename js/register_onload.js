@@ -3,4 +3,6 @@ function register_onload(){
     /*HOW to access array in JS
     * console.log( js_array['vegetables']['leafy'][0] ); // collard greens
     */
+    
+    document.getElementById('inputGivenName').value = console.log( js_array[0][0] );
 }

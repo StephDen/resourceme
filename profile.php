@@ -60,7 +60,6 @@
             <div class="form-group col">
                 <label for="inputGivenName1">Given Names</label>
                 <input type="text" class="form-control" id="inputGivenName1" placeholder = "Jane Elizabeth" name="givenName">
-                document.getElementById('inputGivenName').value = console.log( js_array[0][0] );
             </div>
             <div class="form-group col">
                 <label for="inputLastName1">Family Name</label>
