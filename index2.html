@@ -39,7 +39,7 @@
           <p class="lead text-muted">Journey of a Refugee. Simplified. </p>
           <p>
             <button type=button class="btn btn-primary" data-toggle="modal" data-target="#SignInModal">Sign In</button>
-            <a href="#" class="btn btn-secondary">Register</a>
+            <button type=button class="btn btn-secondary" data-toggle="modal" data-target="#RegisterModal">Register</button>
           </p>
         </div>
       </section>
@@ -130,7 +130,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="RegisterModalLabel">Sign In</h5>
+            <h5 class="modal-title" id="RegisterModalLabel">Register</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -140,10 +140,12 @@
                   <div class="form-group">
                     <label for="inputUser">Username</label>
                     <input type="text" class="form-control" id="inputUser" placeholder="Enter username" name="username">
+                      <small class="form-text text-muted">This username will stay with you throughout your journey.</small>
                   </div>
                   <div class="form-group">
                     <label for="inputPassword">Password</label>
                     <input type="password" class="form-control" id="inputPassword" placeholder="Enter password" name="password">
+                      <small class="form-text text-muted">Make sure that you keep this secure!</small>
                   </div>
                   <button type="submit" class="btn btn-primary">Register</button>
                 </form>
