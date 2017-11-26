@@ -4,6 +4,8 @@
 //--------------------------------------------
 //Start of actual code------------------------
 
+$php_array = dbconnect::sql_query('SELECT * FROM test');
+
 ?>
 
 <html lang="en">
