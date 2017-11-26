@@ -1169,6 +1169,11 @@ $php_array = dbconnect::sql_query('SELECT * FROM test');
         </div>
         </div>
             
+            <div class="form-group">
+    <label for="inputNeeds1">Needs / Accomodations</label>
+    <textarea class="form-control" id="inputNeeds1" rows="3"></textarea>
+  </div>
+            
             <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
             
         </form>   
@@ -1191,23 +1196,23 @@ $php_array = dbconnect::sql_query('SELECT * FROM test');
                               <div class = "row">
                 <div class="form-group col-md-8">
     <label for="inputAddress">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="address1">
+    <input type="text" class="form-control" id="inputAddressa" placeholder="1234 Main St" name="address1a">
   </div>
   <div class="form-group col">
     <label for="inputAddress2">Unit Number</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Unit 203" name="address2">
+    <input type="text" class="form-control" id="inputAddress2a" placeholder="Unit 203" name="address2a">
   </div>
             </div>
             
   <div class="form-row">
       
     <div class="form-group col-md-4">
-      <label for="inputCity">City</label>
-      <input type="text" class="form-control" id="inputCity" name="city">
+      <label for="inputCitya">City</label>
+      <input type="text" class="form-control" id="inputCitya" name="citya">
     </div>
       <div class="form-group col-md-3">
-      <label for="inputState">Country</label>
-      <select id="inputState" class="form-control" name="country">
+      <label for="inputStatea">Country</label>
+      <select id="inputStatea" class="form-control" name="countrya">
           <option> </option>
             <option value="AF">Afghanistan</option>
             <option value="AX">Åland Islands</option>
@@ -1461,12 +1466,12 @@ $php_array = dbconnect::sql_query('SELECT * FROM test');
 </select>
     </div>
     <div class="form-group col-md-2">
-      <label for="inputZip">Postal Code</label>
-      <input type="text" class="form-control" id="inputZip" name="postalCode">
+      <label for="inputZipa">Postal Code</label>
+      <input type="text" class="form-control" id="inputZipa" name="postalCodea">
       </div>
        <div class="form-group col-md-3">
-                <label for="inputArrival">Arrival Date</label>
-                <input type="date" class="form-control" id="inputArrival" name="arrivalDate">
+                <label for="inputArrivala">Arrival Date</label>
+                <input type="date" class="form-control" id="inputArrivala" name="arrivalDatea">
         </div>
         </div>
                 <input class="btn btn-primary" type="submit" value="Submit">
