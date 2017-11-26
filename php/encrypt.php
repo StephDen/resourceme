@@ -42,51 +42,36 @@ class encrypt
     }
 //----------------------------------------------------------------------
 //encryption section
-    /**
-     * @param $salt
-     * @param $string
-     * @return string
-     */
     public static function encrypt_string($string) {
-        // Configuration (must match decryption)
-        $cipher_type = MCRYPT_RIJNDAEL_256;
-        $cipher_mode = MCRYPT_MODE_CBC;
-        $salt = 'MySalt';
-        // Using initialization vector adds more security
-        $iv_size = mcrypt_get_iv_size($cipher_type, $cipher_mode);
-        $iv =  mcrypt_create_iv($iv_size, MCRYPT_RAND);
+        $output = false;
+        $encrypt_method = "AES-256-CBC";
+        $secret_key = 'This is my secret key';
+        $secret_iv = 'This is my secret iv';
+        // hash
+        $key = hash('sha256', $secret_key);
 
-        $encrypted_string = mcrypt_encrypt($cipher_type, $salt, $string, $cipher_mode, $iv);
-        echo $encrypted_string."<br/>";
-        // Return initialization vector + encrypted string
-        // We'll need the $iv when decoding.
-        $string = base64_encode($iv . $encrypted_string);
-        return $string;
+        // iv - encrypt method AES-256-CBC expects 16 bytes - else you will get a warning
+        $iv = substr(hash('sha256', $secret_iv), 0, 16);
+        $output = openssl_encrypt($string, $encrypt_method, $key, 0, $iv);
+        $output = base64_encode($output);
+
+        return $output;
     }
 
-    /**
-     * @param $salt
-     * @param $iv_with_string
-     * @return string
-     */
-    public static function decrypt_string($iv_with_string) {
-        //decoding the encryption
-        echo $iv_with_string."<br/>";
-        $string = base64_decode($iv_with_string);
-        echo $string."<br/>";
-        // Configuration (must match encryption)
-        $cipher_type = MCRYPT_RIJNDAEL_256;
-        $cipher_mode = MCRYPT_MODE_CBC;
-        $salt = 'MySalt';
-        // Extract the initialization vector from the encrypted string.
-        // The $iv comes before encrypted string and has fixed size.
-        $iv_size = mcrypt_get_iv_size($cipher_type, $cipher_mode);
-        $iv = substr($string, 0, $iv_size);
-        $encrypted_string = substr($string, $iv_size);
+    public static function decrypt_string($string) {
+        $output = false;
+        $encrypt_method = "AES-256-CBC";
+        $secret_key = 'This is my secret key';
+        $secret_iv = 'This is my secret iv';
+        // hash
+        $key = hash('sha256', $secret_key);
 
-        $string = mcrypt_decrypt($cipher_type, $salt, $encrypted_string, $cipher_mode, $iv);
-        return $string;
+        // iv - encrypt method AES-256-CBC expects 16 bytes - else you will get a warning
+        $iv = substr(hash('sha256', $secret_iv), 0, 16);
+        $output = openssl_decrypt(base64_decode($string), $encrypt_method, $key, 0, $iv);
+        return $output;
     }
+
 
 }
 ?>
