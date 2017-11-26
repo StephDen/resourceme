@@ -618,16 +618,16 @@
   </label>
 </div>          
                     
-                    <button type="button" class="btn btn-outline-primary">Last Updated</button>
-            <button type="button" class="btn btn-outline-primary">Last Login</button>
-             <div class="form-group col-md-3">
-                                <label for="inputDeparture">Filter From</label>
-                <input type="date" class="form-control" id="inputDeparture" name="departureDate">
-        </div>
+                    
                         
                     </div>
             
-            <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+           <button type="button" class="btn btn-primary">Search</button>
+                    <button type="button" class="btn btn-outline-primary">Last Updated</button>
+            <button type="button" class="btn btn-outline-primary">Last Login</button>
+                    <button type="button" class="btn btn-info">
+  Notify <span class="badge badge-light">4</span>
+</button>
                 
                 </form>
                 
