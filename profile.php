@@ -1173,7 +1173,7 @@ $php_array = dbconnect::sql_query('SELECT * FROM test');
             
             <div class="form-group">
     <label for="inputNeeds1">Needs / Accomodations</label>
-    <textarea class="form-control" id="inputNeeds1" rows="3"></textarea>
+    <textarea class="form-control" id="inputNeeds1" rows="3" name="special_needs"></textarea>
   </div>
             
             <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>

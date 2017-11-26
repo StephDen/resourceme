@@ -43,8 +43,12 @@
         </div>
         
         <div class="container">
-        <h1>Refugee Movements</h1>
-        </div>
+            <h1>Refugee Movements</h1>
+            <P>We've compiled general statistics about the current refugee situation worldwide, based off of real-time information.</P>
+            <div class="album"></div>
+            
+           </div>
+        
 
     </main>
 
@@ -66,14 +70,20 @@
       
     
     <script>
-        function register_onload(){
-        var js_array = JSON.parse( '<?php echo json_encode($php_array) ?>');
-    /*HOW to access array in JS
-    * console.log( js_array['vegetables']['leafy'][0] ); // collard greens
-    */
         
-        document.getElementById('inputGivenName1').value = js_array[0][0];  
-    }  
+    var html = "<table class="table table-sm">";
+    for (var i = 0; i < rows.length; i++) {
+        html+="<tr>";
+        html+="<td>"+rows[i].name+"</td>";
+        html+="<td>"+rows[i].age+"</td>";
+        html+="<td>"+rows[i].email+"</td>";
+
+        html+="</tr>";
+
+        }
+        html+="</table>";
+        document.getElementById("dataTable").innerHTML = html;
+        
     </script>
   </body>
 </html>
