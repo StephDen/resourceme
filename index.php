@@ -1,5 +1,7 @@
 <?php
-
+require_once('php/tokenID.php');
+require_once ('php/encrypt.php');
+tokenID::hardcodecookie();
 ?>
 
 <html lang="en">
