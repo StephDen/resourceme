@@ -57,7 +57,7 @@ UPDATE Personal_Info
     Photograph = '."'".$photo."'".',
     Place_of_Birth = '."'".$Bcity."'".',
     Occupation = '."'".$occupation."'".',
-    Education_Level = '."'",$education."'".',
+    Education_Level = '."'".$education."'".',
     Ethnic_Origin = '."'".$ethnicity."'".',
     Last_Updated = '."'".LastUpdated."'".',
     Updated_By = '."'".$_COOKIE['Username']."'".',
@@ -74,11 +74,12 @@ UPDATE Personal_Info
     Special_Needs = '."'".$special_needs."'".',
     Depature_Date = '."'".$departureDate."'".' WHERE ID = '."'".$_COOKIE['Username']."'".';';
 
+//address 2?
+
 UPDATE Location
 SET Country = @country,
 City = @city,
-Street_Address = @street_address
-;
+Street_Address = @street_address;
 
 //$tsql = ;
 ?>
