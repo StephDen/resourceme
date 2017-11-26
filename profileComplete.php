@@ -82,5 +82,5 @@ UPDATE Personal_Info
       City = '."'".$city."'".',
       Street_Address = '."'".$address1."'".';';
     dbconnect::sql_insert($new_tsql);*/
-//header('Location: profile.php');
+header('Location: profile.php');
 ?>
