@@ -21,11 +21,11 @@ echo 'please log in';
 
 GenerateQuery::Create_New_User('Bob','123','ad1354gdfs2f4se3refaefvsfvgafbgsh');
 
-$array = dbconnect::sql_query('SELECT * FROM test');
+//$array = dbconnect::sql_query('SELECT * FROM test');
 
-for ($i = 0; $i <= count($array); ++$i) {
-    for ($j = 0; $j <= count($array); ++$j) {
-        echo $array[$i][$j] . "<br/>";
-    }
-}
+//for ($i = 0; $i <= count($array); ++$i) {
+//    for ($j = 0; $j <= count($array); ++$j) {
+//        echo $array[$i][$j] . "<br/>";
+//    }
+//}
 ?>
