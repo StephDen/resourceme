@@ -1192,7 +1192,7 @@ $php_array = dbconnect::sql_query('SELECT * FROM test');
     * console.log( js_array['vegetables']['leafy'][0] ); // collard greens
     */
         
-        document.getElementById('inputGivenName').value = js_array[0][0];  
+        document.getElementById('inputGivenName1').value = js_array[0][0];  
     }
         
       
