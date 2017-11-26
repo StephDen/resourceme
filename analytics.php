@@ -61,7 +61,7 @@
             <P>We've compiled general statistics about the current refugee situation worldwide, based off of real-time information.</P>
             <div class="album container" style="padding-top: 3rem; padding-bottom: 3rem; padding-left: 3rem; padding-right: 3rem">
                 <h4>Filters</h4><hr>
-                <form action="">
+                <form action="analytics.php" method="post">
                     <div class="row">
                         <div class="form-group col">
                 <label for="inputSex1">Sex</label>
