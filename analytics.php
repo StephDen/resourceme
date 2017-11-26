@@ -746,7 +746,7 @@
     
         var table = document.getElementById("dataTable");
         var counter;
-        counter = 0;
+        counter = 0; 
         
     var html = "<tbody>";
     for (var i = 0; i < js_array.length; i++) {
@@ -761,8 +761,8 @@
         table.innerHTML = html;
         counter = counter+1;
     }
-        console.log(counter);
-        document.getElementById("myCounter").innerHTML = counter.toString();
+        console.log(counter.toString);
+        document.getElementById("myCounter").innerHTML = counter.toString;
     </script>
       
       
