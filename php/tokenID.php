@@ -19,7 +19,7 @@ class tokenID
         }elseif(!isset($_COOKIE['resourcemetoken'])){
             echo 'nocookie';
         }else{
-            $result = dbconnect::sql_query(
+            /*$result = dbconnect::sql_query(
                 'SELECT ID
                       FROM Personal_Info
                       WHERE Token ='.$_COOKIE['resourcetoken'].';'
@@ -42,7 +42,7 @@ class tokenID
                     $encrypted_string,
                     time()+(86400 * 30)
                 );//time = 30days
-            }
+            }*/
             return;
         }
     }
@@ -64,12 +64,12 @@ class tokenID
             $time = time();
             $encrypted_string1= encrypt::encrypt_string($time);
             $encrypted_string = encrypt::encrypt_string(encrypt::signtoken($time));
-            dbconnect::sql_insert(
+            /*dbconnect::sql_insert(
                 'UPDATE Personal_Info
                         SET Last_Login='.$time.',Token ='.$encrypted_string1.'
                         WHERE ID ='.$result.' ; '
             );
-            //ADD IN SQL to update last login as well as generating a new cookie
+            //ADD IN SQL to update last login as well as generating a new cookie*/
             setcookie('resourcemetoken',
                 $encrypted_string,
                 time()+(86400 * 30)
