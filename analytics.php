@@ -615,6 +615,7 @@
     <input class="form-check-input" type="checkbox" value="" name="specialNeedsSearch">Special Needs
   </label>
 </div>          
+                    <input class="btn btn-primary" type="submit" value="Submit">
                 
                 </form>
                 
