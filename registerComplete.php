@@ -6,6 +6,7 @@
  * Time: 10:02 PM
  */
 
+echo "something";
 echo $_POST["givenName_register"];
 //$tsql = ;
 ?>
