@@ -847,7 +847,14 @@ $php_array = dbconnect::sql_query('SELECT * FROM test');
             <div class= "row">
                 <div class="form-group col">
       <label for="inputZip">Marital Status</label>
-      <input type="text" class="form-control" id="inputMarital" name="maritalStatus">
+      <select type="text" class="form-control" id="inputMarital" name="maritalStatus">
+        <option>Single</option>
+          <option>Married</option>
+          <option>Common-law Partner</option>
+          <option>Widowed</option>
+          <option>Divorced</option>
+          <option>Seperated</option>
+                    </select>
       </div>
                 <div class="form-group col">
       <label for="inputZip">Religion</label>
