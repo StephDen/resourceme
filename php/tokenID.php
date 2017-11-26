@@ -66,7 +66,7 @@ class tokenID
             $encrypted_string = encrypt::encrypt_string(encrypt::signtoken($time));
             dbconnect::sql_insert(
                 'UPDATE Personal_Info
-                        SET Last_Login='.$time.',Token ='.$encrypted_string.'
+                        SET Last_Login='.$time.',Token ='.$encrypted_string1.'
                         WHERE ID ='.$result.' ; '
             );
             //ADD IN SQL to update last login as well as generating a new cookie
