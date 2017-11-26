@@ -1,3 +1,11 @@
+<?php
+//Section for including the necessary php files
+
+//--------------------------------------------
+//Start of actual code------------------------
+
+?>
+
 <html lang="en">
   <head>
     <title>ResourceMe</title>
