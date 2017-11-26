@@ -1514,10 +1514,10 @@ $php_array = GenerateQuery::DisplayQuery();
     * console.log( js_array['vegetables']['leafy'][0] ); // collard greens
     */
         document.getElementById('inputBday1').value = js_array[0][1];
-        document.getElementById('inputSex1').value = js_array[2][0];
-        document.getElementById('inputMarital').value = js_array[3][0];
+        document.getElementById('inputSex1').value = js_array[0][2];
+        document.getElementById('inputMarital').value = js_array[0][3];
         document.getElementById('inputReligion').value = js_array[0][4];
-        document.getElementById('inputGivenName1').value = js_array[14][0];
+        document.getElementById('inputGivenName1').value = js_array[0][0];
         document.getElementById('inputGivenName1').value = js_array[14][0];
         document.getElementById('inputGivenName1').value = js_array[14][0];
         document.getElementById('inputGivenName1').value = js_array[14][0];
