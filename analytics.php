@@ -622,7 +622,7 @@
                         
                     </div>
             
-           <button type="button" class="btn btn-primary">Search</button>
+           <button type="submit" class="btn btn-primary">Search</button>
                     <button type="button" class="btn btn-outline-primary">Last Updated</button>
             <button type="button" class="btn btn-outline-primary">Last Login</button>
                     
