@@ -70,7 +70,6 @@ UPDATE Personal_Info
     Address_of_Origin = '."'".$address1Origin."'".',
     Special_Needs = '."'".$special_needs."'".',
     Depature_Date = '."'".$departureDate."'".' WHERE ID = '."'".$_COOKIE['username']."'".';';
-    echo $_COOKIE['username'];
     dbconnect::sql_insert($new_tsql);
 
 //address 2?

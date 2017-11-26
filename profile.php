@@ -5,7 +5,6 @@ require_once('php/encrypt.php');
 require_once ('php/tokenID.php');
 require_once('php/GenerateQuery.php');
 
-tokenID::hardcodecookie();
 tokenID::authenticate();
 ///////////////////////////////////
 //--------------------------------------------
