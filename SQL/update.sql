@@ -16,6 +16,9 @@ DECLARE @lastName char(40);
 DECLARE @country_of_birth char (40);
 DECLARE @phone char (16);
 DECLARE @email char (50);
+DECLARE @country_of_origin char (40);
+DECLARE @city_of_origin char (40);
+DECLARE @address_of_origin char (60);
 
 UPDATE Personal_Info
  SET Date_of_Birth = @date_of_birth,
@@ -36,11 +39,14 @@ UPDATE Personal_Info
     Active_Status = 1,
     Country_of_Birth = @country_of_birth,
     Phone = @phone,
-    Email = @email
+    Email = @email,
+    Country_of_Origin = @country_of_origin,
+    City_of_Origin = @city_of_origin,
+    Address_of_Origin = @address_of_origin
 ;
 
 UPDATE Location
-SET Country = @country_of_origin,
-City = @city_of_origin,
-Street_Address = @address_of_origin
+SET Country = @country,
+City = @city,
+Street_Address = @street_address
 ;
