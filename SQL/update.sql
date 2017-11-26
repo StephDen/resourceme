@@ -49,7 +49,9 @@ UPDATE Personal_Info
     Depature_Date = @depature_date
 ;
 
-UPDATE Location
+UPDATE (SELECT TOP 1 *
+FROM Location
+ORDER BY Date_Arrived DESC)
 SET Country = @country,
 City = @city,
 Street_Address = @street_address
