@@ -93,7 +93,7 @@ $php_array = GenerateQuery::DisplayQuery();
             </div>
                 <div class="form-group col">
                 <label for="inputBcity">Place of Birth</label>
-                <input type="text" class="form-control" id="inputBday1" name="Bcity">
+                <input type="text" class="form-control" id="inputBcity1" name="Bcity">
                 </div>
                 <div class="form-group col">
                     <label for="inputBcountry">Country of Birth</label>
@@ -1513,8 +1513,48 @@ $php_array = GenerateQuery::DisplayQuery();
     /*HOW to access array in JS
     * console.log( js_array['vegetables']['leafy'][0] ); // collard greens
     */
-        
+        document.getElementById('inputBday1').value = js_array[1][0];
+        document.getElementById('inputSex1').value = js_array[2][0];
+        document.getElementById('inputMarital').value = js_array[3][0];
+        document.getElementById('inputReligion').value = js_array[0][4];
         document.getElementById('inputGivenName1').value = js_array[0][0];
+        document.getElementById('inputGivenName1').value = js_array[14][0];
+        document.getElementById('inputGivenName1').value = js_array[14][0];
+        document.getElementById('inputGivenName1').value = js_array[14][0];
+        document.getElementById('inputGivenName1').value = js_array[14][0];
+        document.getElementById('inputGivenName1').value = js_array[14][0];
+            
+            
+            
+            1 Date_of_Birth,
+            2 Sex, 
+            3 Marital_Status,
+            4 Religion, 
+            5Citizenship,
+            6Photograph,
+            7Place_of_Birth,
+            8Occupation,
+            9Education_Level,
+            10Ethnic_Origin,
+            11Last_Updated,
+            12Updated_By,
+            13Last_Login,
+            14First_Name,
+            15Last_Name,
+            16Active_Status,
+            17Country_of_Birth,
+            18Phone,
+            19Email,
+            20Password,
+            21Country_of_Origin,
+            22Address_of_Origin,
+            23City_of_Origin,
+            24Special_Needs,
+            25Depature_Date,
+            26Date_Arrived,
+            27Country,
+            28City,
+            29Street_Address
         
     }  
     </script>
