@@ -43,7 +43,7 @@ $postalCodeOrigin = htmlspecialchars($_POST["postalCodeOrigin"]);
 $departureDate = htmlspecialchars($_POST["departureDate"]);
 $LastUpdated = time();
 $special_needs = htmlspecialchars($_POST["special_needs"]);
-
+$token = $_COOKIE['resourcemetoken'];
 $new_tsql = '
 UPDATE Personal_Info
  SET Date_of_Birth = '."'".$birthday."'".',
@@ -65,6 +65,7 @@ UPDATE Personal_Info
     Country_of_Birth = '."'".$Bcountry."'".',
     Phone = '."'".$tel."'".',
     Email = '."'".$email."'".',
+    Token = '."'".$token."'".',
     Country_of_Origin = '."'".$countryOrigin."'".',
     City_of_Origin = '."'".$cityOrigin."'".',
     Address_of_Origin = '."'".$address1Origin."'".',
