@@ -1,6 +1,14 @@
 --Query for Registrated a new account
-INSERT INTO Personal_Info (ID,Password)
-VALUES(@ID, @Password)
+
+DECLARE @ID char(16);
+DECLARE @Password char(16);
+DECLARE @Token varchar(max);
+SET @Password = 'MyPassword';
+SET @ID = 'MyUsername';
+SET @Token = 'ad1354gdfs2f4se3refaefvsfvgafbgsh';
+
+INSERT INTO Personal_Info (ID, Password, Token)
+VALUES(@ID, @Password, @Token)
 ;
 INSERT INTO Location(ID)
 VALUES (@ID)
