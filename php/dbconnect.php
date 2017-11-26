@@ -9,6 +9,8 @@ class dbconnect {
       "PWD" => "Qwerty!@#"
   );
 
+
+  //to do for this: set a way to loop thru possible items from return values
   //querying function
   public static function sql_query($tsql){
       $conn = sqlsrv_connect(self::$serverName,self::$connectionOptions);   //connects to sql database
@@ -20,16 +22,20 @@ class dbconnect {
           echo (sqlsrv_errors());
         }
         //turns the query results into an array
+      //commented section loops through each entry and prints it, remove @row and return part once working
       //while( $row = sqlsrv_fetch_array( $getResults, SQLSRV_FETCH_ASSOC) ) {
       //    echo $row['Location'].", ".$row['address']."<br />";
       //}
-      $row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC);
-      return $row;
+      $row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC);  //maybe delete
+      return $row;      //maybe delete
   }
 //inserting data into sql server without returning anything back
   public static function sql_insert($tsql){
       $conn = sqlsrv_connect(self::$serverName,self::$connectionOptions);
-      sqlsrv_query($conn, $tsql);
+      $getresults = sqlsrv_query($conn, $tsql);
+      if ($getResults == FALSE){       //checks if database completes query
+          echo (sqlsrv_errors());
+      }
   }
 }
 
