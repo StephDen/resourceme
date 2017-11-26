@@ -5,6 +5,13 @@
  * Date: 2017-11-25
  * Time: 10:02 PM
  */
+//REQUIRED FOR ALL FILES///////////
+require_once('php/dbconnect.php');
+require_once('php/encrypt.php');
+require_once ('php/tokenID.php');
+tokenID::hardcodecookie();
+tokenID::authenticate();
+///////////////////////////////////
 
 echo "something";
 
