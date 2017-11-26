@@ -17,11 +17,9 @@ if(GenerateQuery::Login($user,$pass)=='true'){
         time()+(86400 * 30)
     );//time = 30days
     header('Location: profile.php');
-    echo 'true';
 }else{//Login failed
     $_COOKIE['username']='';
-    echo $pass;
-    //header('Location: index.php');
+    header('Location: index.php');
     echo "alert('Incorrect Login!');";
 }
 //Victor Test Code Below
