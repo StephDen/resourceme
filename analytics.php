@@ -627,7 +627,7 @@
             <button type="button" class="btn btn-outline-primary">Last Login</button>
                     
                     
-                    <button type="button" class="btn btn-info" data-toggle="modal" data-target=".bd-example-modal-sm">Notify <span class="badge badge-light">4</span></button>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target=".bd-example-modal-sm">Notify <span class="badge badge-light" id="myCounter">0</span></button>
 
 <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
@@ -646,17 +646,19 @@
                     <tr>
                         <th scope="col">Given Names</th>
                         <th scope="col">Family Name</th>
-                        <th scope="col">Email</th>
                         <th scope="col">Phone</th>
+                        <th scope="col">Email</th>
                         <th scope="col">Sex</th>
                         <th scope="col">Marital Status</th>
                         <th scope="col">Education</th>
-                        <th scope="col">Needs</th>
-                        <th scope="col">Country of Origin</th>
                         <th scope="col">Current Country</th>
+                        <th scope="col">Country of Origin</th>
+                        <th scope="col">Needs</th>
                     </tr>    
                 </thead>
-                    <div id="dataTable"></div>  
+                <tbody id="dataTable" style="font-size: 10">
+                    
+                </tbody>
                 </table>        
         
               
@@ -741,6 +743,10 @@
         $('#govModal').modal("show");      
         
      var js_array = JSON.parse( '<?php echo json_encode($array) ?>');
+    
+        var table = document.getElementById("dataTable");
+        var counterECCC;
+        counterECCC = 0; 
         
     var html = "<tbody>";
     for (var i = 0; i < js_array.length; i++) {
@@ -752,8 +758,11 @@
 
         }
         html+="</tbody>";
-        document.getElementById("dataTable").innerHTML = html;
+        table.innerHTML = html;
+        counterECCC = counterECCC+1;
     }
+        console.log(counterECCC.toString);
+        document.getElementById("myCounter").innerHTML = counterECCC.toString;
     </script>
       
       
