@@ -355,8 +355,8 @@
     </div>
                         
         <div class="form-group col-md-3">
-      <label for="filterCountry">Country of Origin</label>
-      <select id="filterCountry" class="form-control" name="countryNowSearch">
+      <label for="filterCountry">Country of Birth</label>
+      <select id="filterCountry" class="form-control" name="countryBirthSearch">
           <option> </option>
             <option value="AF">Afghanistan</option>
             <option value="AX">Åland Islands</option>
