@@ -52,7 +52,6 @@ class GenerateQuery
             Date_of_Birth,
             Sex, Marital_Status,
             Religion, Citizenship,
-            Photograph,
             Place_of_Birth,
             Occupation,
             Education_Level,
