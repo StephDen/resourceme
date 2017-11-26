@@ -43,9 +43,10 @@ class dbconnect {
 //inserting data into sql server without returning anything back
   public static function sql_insert($tsql){
       $conn = sqlsrv_connect(self::$serverName,self::$connectionOptions);
+      echo 'connected';
       $getResults = sqlsrv_query($conn, $tsql);
       if ($getResults == FALSE){       //checks if database completes query
-          //echo (sqlsrv_errors());
+          echo (sqlsrv_errors());
       }
   }
 
