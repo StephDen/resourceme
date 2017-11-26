@@ -20,7 +20,7 @@ class GenerateQuery
     }
 
     Public Static Function Login($user,$pass){
-        $new_tsql = 'SELECT ID FROM Personal_Info WHERE ID ='."'".$user.'AND'."'".$pass."'".';';
+        $new_tsql = 'SELECT ID FROM Personal_Info WHERE ID ='."'".$user.' AND '."'".$pass."'".';';
         $temp_array = dbconnect::sql_query($new_tsql);
         echo $temp_array[0][0];
         if ($temp_array[0][0] == null){
