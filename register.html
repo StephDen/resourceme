@@ -47,7 +47,7 @@
             
         </div>
         <div class= "container album" style="padding-top: 3rem; padding-bottom: 3rem; padding-left: 5rem; padding-right: 5rem">
-        <form>
+        <form action="registerComplete.php" method="post">
             <h3><span class="badge badge-info">Personal Information</span></h3>
             <div class = "row">
             <div class="form-group col">
@@ -75,7 +75,7 @@
             </div>
             <div class="form-group col">
                 <label for="inputLastName1">Nationality</label>
-                <select type="text" class="form-control" id="inputLastName1" placeholder = "Smith">
+                <select type="text" class="form-control" id="inputLastName1" name="nationality">
                     <option selected> </option>
                     <option value="afghan">Afghan</option>
                     <option value="albanian">Albanian</option>
@@ -276,7 +276,7 @@
                 
   <div class="form-group">
     <label for="exampleFormControlFile1">Photograph</label>
-    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="photo">
   </div>
       </div></div>
             <h3><span class="badge badge-info">Contact Information</span></h3>
@@ -309,7 +309,7 @@
     </div>
       <div class="form-group col-md-4">
       <label for="inputState">Current Country</label>
-      <select id="inputState" class="form-control">
+      <select id="inputState" class="form-control" name="nationality">
             <option value="AF">Afghanistan</option>
             <option value="AX">Åland Islands</option>
             <option value="AL">Albania</option>
@@ -580,8 +580,6 @@
       <label for="inputZip">Ethnic Origin</label>
       <input type="text" class="form-control" id="inputEthnicity" name="ethnicity">
       </div>
-                
-      
             </div>
             <div class="row">
             <div class="form-group col">
@@ -593,6 +591,7 @@
       <input type="text" class="form-control" id="inputOccupation" name="occupation">
       </div>
             </div>
+            
             
             <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
             
