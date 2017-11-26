@@ -23,7 +23,7 @@ class GenerateQuery
         $new_tsql = 'SELECT ID FROM Personal_Info WHERE ID ='."'".$user."'".' AND '."'".$pass."'".';';
         $temp_array = dbconnect::sql_query($new_tsql);
         echo $temp_array[0][0];
-        if ($temp_array[0][0] == null){
+        if (is_null($temp_array[0][0])){
             return 'false';
         }
         else{
