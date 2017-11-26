@@ -13,9 +13,6 @@ tokenID::hardcodecookie();
 tokenID::authenticate();
 ///////////////////////////////////
 
-echo "something";
-
-
 //convert all text boxes to variables
 $givenName = htmlspecialchars($_POST["givenName"]);
 $lastName = htmlspecialchars($_POST["lastName"]);
@@ -74,12 +71,17 @@ UPDATE Personal_Info
     Special_Needs = '."'".$special_needs."'".',
     Depature_Date = '."'".$departureDate."'".' WHERE ID = '."'".$_COOKIE['Username']."'".';';
 
+    dbconnect::sql_insert($new_tsql);
+
 //address 2?
 
-UPDATE Location
-SET Country = @country,
-City = @city,
-Street_Address = @street_address;
+    $new_tsql = '
+      UPDATE (SELECT TOP 1 *
+      FROM Location
+      ORDER BY Date_Arrived DESC)
+      SET Country = '."'".$country."'".',
+      City = '."'".$city."'".',
+      Street_Address = '."'".$address1."'".';';
+    dbconnect::sql_insert($new_tsql);
 
-//$tsql = ;
 ?>
