@@ -46,6 +46,7 @@ class dbconnect {
       echo 'connected';
       $getResults = sqlsrv_query($conn, $tsql);
       if ($getResults == FALSE){       //checks if database completes query
+          echo 'error';
           //echo (sqlsrv_errors());
       }
   }
