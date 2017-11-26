@@ -7,6 +7,7 @@
  */
 
 require_once('php/dbconnect.php');
+require_once ('php/GenerateQuery.php');
 
 echo 'please log in';
 
@@ -17,6 +18,8 @@ echo 'please log in';
 //$returntext = dbconnect::sql_query('Select * FROM test');
 //echo count($returntext)."<br />";
 //echo $returntext['address'];
+
+GenerateQuery::Create_New_User('Bob','123');
 
 $array = dbconnect::sql_query('SELECT * FROM test');
 
