@@ -761,7 +761,7 @@
         counter++;
     }
         
-        document.getelementbyid("myCounter").innerhtml = counter;
+        document.getElementById("myCounter").innerhtml = counter;
     </script>
       
       
