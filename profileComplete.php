@@ -70,7 +70,7 @@ UPDATE Personal_Info
     City_of_Origin = '."'".$cityOrigin."'".',
     Address_of_Origin = '."'".$address1Origin."'".',
     Special_Needs = '."'".$special_needs."'".',
-    Depature_Date = '."'".$departureDate."'".' WHERE ID = '."'".$_COOKIE['Username']."'".';';
+    Depature_Date = '."'".$departureDate."'".' WHERE ID = '."'".$_COOKIE['username']."'".';';
 
     dbconnect::sql_insert($new_tsql);
 
