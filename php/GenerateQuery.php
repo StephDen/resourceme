@@ -94,23 +94,23 @@ class GenerateQuery
             $new_sql = '
         SELECT First_Name, Last_Name, Phone, Email, Sex, Marital_Status, Education_Level, Country_of_Birth, Country_of_Origin, Special_Needs
         FROM Personal_Info
-        WHERE (Sex = '."'".$sex."'".' OR('."'".$sex."'".' IS NULL)) AND
-        (Marital_Status = '."'".$maritalStatus."'".' OR ('."'".$maritalStatus."'".' IS NULL)) AND
-        (Education_Level = '."'".$education."'".' OR ('."'".$education."'".' IS NULL)) AND
-        (Country_of_Birth = '."'".$countryBirth."'".' OR('."'". $countryBirth."'".' IS NULL)) AND 
-        (Country_of_Origin = '."'".$countryOG."'".' OR('."'". $countryOG."'".' IS NULL)) AND
-        (Special_Needs = '."'".$specialNeeds."'".' OR('."'". $specialNeeds."'".' IS NULL));';
-        //} else{
-           // $temp = '*';
-           /* $new_sql = '
+        WHERE Sex = '."'".$sex."'".' OR '."'".$sex."'".' =Null AND
+        Marital_Status = '."'".$maritalStatus."'".' OR '."'".$maritalStatus."'".' = Null AND
+        Education_Level = '."'".$education."'".' OR '."'".$education."'".' = Null AND
+        Country_of_Birth = '."'".$countryBirth."'".' OR'."'". $countryBirth."'".' = Null AND 
+        Country_of_Origin = '."'".$countryOG."'".' OR'."'". $countryOG."'".' = Null AND
+        Special_Needs = NULL;';
+        } else{
+            $temp = '*';
+            $new_sql ='
         SELECT First_Name, Last_Name, Phone, Email, Sex, Marital_Status, Education_Level, Country_of_Birth, Country_of_Origin, Special_Needs
         FROM Personal_Info
-        WHERE (Sex = '."'".$sex."'".' OR ('."'".$sex."'".' IS Null)) AND
-        (Marital_Status = '."'".$maritalStatus."'".' OR ('."'".$maritalStatus."'".' IS NULL)) AND
-        (Education_Level = '."'".$education."'".' OR ('."'".$education."'".' IS NULL)) AND
-        (Country_of_Birth = '."'".$countryBirth."'".' OR('."'". $countryBirth."'".' IS NULL)) AND 
-        (Country_of_Origin = '."'".$countryOG."'".' OR('."'". $countryOG."'".' IS NULL)) AND
-        (Special_Needs LIKE '."'".$temp."'".');';*/
+        WHERE Sex = '."'".$sex."'".' OR '."'".$sex."'".' =Null AND
+        Marital_Status = '."'".$maritalStatus."'".' OR '."'".$maritalStatus."'".' = Null AND
+        Education_Level = '."'".$education."'".' OR '."'".$education."'".' = Null AND
+        Country_of_Birth = '."'".$countryBirth."'".' OR'."'". $countryBirth."'".' = Null AND 
+        Country_of_Origin = '."'".$countryOG."'".' OR'."'". $countryOG."'".' = Null AND
+        Special_Needs LIKE '."'".$temp."'".';';
 
         //}
 
