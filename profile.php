@@ -1195,7 +1195,7 @@ $php_array = GenerateQuery::DisplayQuery();
             </button>
           </div>
           <div class="modal-body">
-            <form action="" method="post">
+            <form action="LocationInsert.php" method="post">
                               <div class = "row">
                 <div class="form-group col-md-8">
     <label for="inputAddress">Address</label>

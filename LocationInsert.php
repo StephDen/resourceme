@@ -6,6 +6,8 @@
  * Time: 7:55 AM
  */
 
-require_once('php/GenerateQuery.php')
-
-UpdateNewLocation();
+require_once('php/dbconnect.php');
+require_once('php/GenerateQuery.php');
+GenerateQuery::UpdateNewLocation();
+header('Location: profile.php');
+?>
