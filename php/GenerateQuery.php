@@ -6,6 +6,8 @@
  * Time: 12:16 AM
  */
 
+require_Once('php/dbconnect.php');
+
 class GenerateQuery
 {
     Public Static Function Create_New_User($user,$pass,$token){
