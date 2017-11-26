@@ -53,20 +53,20 @@
 
         <h1 class="display-4">Welcome to <b>Resource</b>Me</h1>
         
-            <p>Here is text that describes what this is about. </p>
+            <p>Streamlined processing. Diverse analytics.</p>
             
           <div class="row">
             <div class="card">
               <img src="https://cdn.stocksnap.io/img-thumbs/960w/EB1C4YD25X.jpg" alt="Card image cap">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Being displaced can happen at any time. That's why you can start your registration process online at your leisure.</p>
             </div>
             <div class="card">
               <img src="http://www.unhcr.org/thumb1/5576fd6d6.jpg" alt="Card image cap">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Upon arrival at a refugee camp or contact with officials hosting refugees, the process becomes more streamlined so that you can receive support and resources as soon as possible.</p>
             </div>
             <div class="card">
               <img src="https://cdn.stocksnap.io/img-thumbs/960w/1LW59GG0WK.jpg" alt="Card image cap">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Data collected can help governments and NGOs predict and plan for the future, allocating resources where they are needed on a proactive basis.</p>
             </div>
 
             
