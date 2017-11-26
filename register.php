@@ -60,7 +60,7 @@
             <div class = "row">
             <div class="form-group col">
                 <label for="inputGivenName1">Given Names</label>
-                <input type="text" class="form-control" id="inputGivenName1" placeholder = "Jane Elizabeth" name="givenName">
+                <input type="text" class="form-control" id="inputGivenName1" placeholder = "Jane Elizabeth" name="givenName_register">
             </div>
             <div class="form-group col">
                 <label for="inputLastName1">Family Name</label>
