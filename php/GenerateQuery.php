@@ -39,9 +39,12 @@ class GenerateQuery
         $countrya = htmlspecialchars($_POST["countrya"]);
         $postalCodea = htmlspecialchars($_POST["postalCodea"]);
         $arrivalDatea = htmlspecialchars($_POST["arrivalDatea"]);
-        //(ID,DateArrived,Country,)
-        $new_tsql = 'Insert Location values('."'".$_COOKIE['username']."'".','."'".')'."'";
+        //(ID,DateArrived,Country,City,Address)
+        $new_tsql = 'INSERT INTO Location VALUES('."'".$_COOKIE['username']."'".','."'".$countrya."'".','."'".$citya."'".','."'".$address1a."'".')'."'";
+        dbconnect::sql_insert($new_tsql);
 
+        $new_tsql = 'UPDATE Personal_Info SET Last_Updated'."'".time()."'".' WHERE ID = '."'".$_COOKIE['username']."'".';';
+        dbconnect::sql_insert($new_tsql);
     }
 
 }
