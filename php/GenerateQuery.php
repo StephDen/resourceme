@@ -96,7 +96,7 @@ class GenerateQuery
         FROM Personal_Info
         WHERE Sex = '."'".$sex."'".' OR '."'".$sex."'".' =Null AND
         Marital_Status = '."'".$maritalStatus."'".' OR '."'".$maritalStatus."'".' = Null AND
-        Education_Level = '."'".$education."'".' OR '."'".education_level."'".' = Null AND
+        Education_Level = '."'".$education."'".' OR '."'".$education."'".' = Null AND
         Country_of_Birth = '."'".$countryBirth."'".' OR'."'". $countryBirth."'".' = Null AND 
         Country_of_Origin = '."'".$countryOG."'".' OR'."'". $countryOG."'".' = Null AND
         Special_Needs = NULL;';
@@ -107,7 +107,7 @@ class GenerateQuery
         FROM Personal_Info
         WHERE Sex = '."'".$sex."'".' OR '."'".$sex."'".' =Null AND
         Marital_Status = '."'".$maritalStatus."'".' OR '."'".$maritalStatus."'".' = Null AND
-        Education_Level = '."'".$education."'".' OR '."'".education_level."'".' = Null AND
+        Education_Level = '."'".$education."'".' OR '."'".$education."'".' = Null AND
         Country_of_Birth = '."'".$countryBirth."'".' OR'."'". $countryBirth."'".' = Null AND 
         Country_of_Origin = '."'".$countryOG."'".' OR'."'". $countryOG."'".' = Null AND
         Special_Needs LIKE '."'".$temp."'".';';
