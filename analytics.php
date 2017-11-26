@@ -646,10 +646,12 @@
                     <tr>
                         <th scope="col">Given Names</th>
                         <th scope="col">Family Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Phone</th>
                         <th scope="col">Sex</th>
                         <th scope="col">Marital Status</th>
-                        <th scope="col">Education Level</th>
-                        <th scope="col">Special Needs</th>
+                        <th scope="col">Education</th>
+                        <th scope="col">Needs</th>
                         <th scope="col">Country of Origin</th>
                         <th scope="col">Current Country</th>
                     </tr>    
@@ -744,16 +746,11 @@
     <script>
         
         var js_array = JSON.parse( '<?php echo json_encode($array) ?>');
-    /*HOW to access array in JS
-    * console.log( js_array['vegetables']['leafy'][0] ); // collard greens
-    */
-        
-        document.getElementById('inputGivenName1').value = js_array[0][0];  
         
     var html = "<tbody>";
     for (var i = 0; i < js_array.length; i++) {
         html+="<tr>";
-        for(var j =0; j < 30; j++){
+        for(var j =0; j < 10; j++){
             html+="<td>"+js_array[i].[j]+"</td>";
         }
         html+="</tr>";
