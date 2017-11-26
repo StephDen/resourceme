@@ -75,6 +75,7 @@
                 <div class="form-group col-md-2">
       <label for="inputZip">Marital Status</label>
       <select type="text" class="form-control" id="inputMarital" name="maritalStatusSearch">
+          <option></option>
         <option>Single</option>
           <option>Married</option>
           <option>Common-law Partnership</option>
@@ -86,6 +87,7 @@
                 <div class="form-group col-md-3" style="justify-content: center;">
       <label for="inputZip">Education Level</label>
         <select type="text" class="form-control" id="inputEducation" name="educationSearch">
+            <option></option>
             <option>None</option>
             <option>Elementary School</option>
             <option>Secondary School</option>
