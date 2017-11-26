@@ -90,7 +90,7 @@ class GenerateQuery
         $countryBirth = htmlspecialchars($_POST["countryBirthSearch"]);
         $specialNeeds = htmlspecialchars($_POST["specialNeedsSearch"]);
 
-        if ($specialNeeds == ""){
+        //if ($specialNeeds == ""){
             $new_sql = '
         SELECT First_Name, Last_Name, Phone, Email, Sex, Marital_Status, Education_Level, Country_of_Birth, Country_of_Origin, Special_Needs
         FROM Personal_Info
@@ -99,10 +99,10 @@ class GenerateQuery
         (Education_Level = '."'".$education."'".' OR ('."'".$education."'".' IS NULL)) AND
         (Country_of_Birth = '."'".$countryBirth."'".' OR('."'". $countryBirth."'".' IS NULL)) AND 
         (Country_of_Origin = '."'".$countryOG."'".' OR('."'". $countryOG."'".' IS NULL)) AND
-        (Special_Needs IS NULL);';
-        } else{
-            $temp = '*';
-            $new_sql = '
+        (Special_Needs = '."'".$specialNeeds."'".' OR('."'". $specialNeeds."'".' IS NULL))';
+        //} else{
+           // $temp = '*';
+           /* $new_sql = '
         SELECT First_Name, Last_Name, Phone, Email, Sex, Marital_Status, Education_Level, Country_of_Birth, Country_of_Origin, Special_Needs
         FROM Personal_Info
         WHERE (Sex = '."'".$sex."'".' OR ('."'".$sex."'".' IS Null)) AND
@@ -110,9 +110,9 @@ class GenerateQuery
         (Education_Level = '."'".$education."'".' OR ('."'".$education."'".' IS NULL)) AND
         (Country_of_Birth = '."'".$countryBirth."'".' OR('."'". $countryBirth."'".' IS NULL)) AND 
         (Country_of_Origin = '."'".$countryOG."'".' OR('."'". $countryOG."'".' IS NULL)) AND
-        (Special_Needs LIKE '."'".$temp."'".');';
+        (Special_Needs LIKE '."'".$temp."'".');';*/
 
-        }
+        //}
 
         return dbconnect::sql_query($new_sql);
     }
