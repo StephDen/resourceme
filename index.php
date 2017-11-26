@@ -27,7 +27,7 @@
             <div class="inner">
               <nav class="nav nav-masthead">
                 <a class="nav-link active" href="/index.php">Home</a>
-                <a class="nav-link" data-toggle="modal" data-target="#SignInModal">Profile</a>
+                <a class="nav-link" href="" data-toggle="modal" data-target="#SignInModal">Profile</a>
                 <a class="nav-link" href="#">Analytics</a>
               </nav>
             </div>
