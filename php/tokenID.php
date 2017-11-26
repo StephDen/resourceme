@@ -59,7 +59,7 @@ class tokenID
             echo "<script type='text/javascript'>alert('please enable cookies');</script>";
             //header('Location: login.php');
         }else{
-            $result = "'abc'";
+            $result = 'abc';
             //getting server time
             $time = time();
             $encrypted_string = encrypt::encrypt_string($time);
