@@ -1488,7 +1488,7 @@ $php_array = dbconnect::sql_query('SELECT * FROM test');
 
     </main>
 
-    <footer class="text-muted">
+    <footer class="text-muted" style="background-color: #f7f7f7">
       <div class="container">
         <p class="float-right">
           <a href="#">Back to top</a>
