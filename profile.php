@@ -25,7 +25,7 @@ $php_array = dbconnect::sql_query('SELECT * FROM test');
       
   </head>
     
-  <body onload="register_onload()">
+  <body>
     <header class="masthead clearfix">
       <div class="navbar navbar-dark bg-dark">
         <div class="container d-flex justify-content-between">
@@ -1186,12 +1186,12 @@ $php_array = dbconnect::sql_query('SELECT * FROM test');
     
     <script>
     
-    function register_onload(){
+    
     var js_array = JSON.parse( '<?php echo json_encode($php_array) ?>');
     /*HOW to access array in JS
     * console.log( js_array['vegetables']['leafy'][0] ); // collard greens
     */
-}
+    
         
       document.getElementById('inputGivenName').value = console.log( js_array[0][0] );  
     </script>
