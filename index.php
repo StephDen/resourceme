@@ -1,6 +1,7 @@
 <?php
 
 ?>
+
 <html lang="en">
   <head>
     <title>ResourceMe</title>
@@ -8,37 +9,28 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="icon" href="/images/favicon.png">
+      
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    
+    <link href="/css/spacing.css" rel="stylesheet">
+      
   </head>
   <body>
 
 
-    <header>
-      <div class="collapse bg-dark" id="navbarHeader">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-8 py-4">
-              <h4 class="text-white">About</h4>
-              <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
-            </div>
-            <div class="col-sm-4 py-4">
-              <h4 class="text-white">Contact</h4>
-              <ul class="list-unstyled">
-                <li><a href="#" class="text-white">Follow on Twitter</a></li>
-                <li><a href="#" class="text-white">Like on Facebook</a></li>
-                <li><a href="#" class="text-white">Email me</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+    <header class="masthead clearfix">
       <div class="navbar navbar-dark bg-dark">
         <div class="container d-flex justify-content-between">
-          <a href="#" class="navbar-brand">Album</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+            <a href="#" class="navbar-brand"><!--<img src="images/logo.png" style="height:45px;">--><b>Resource</b>Me</a>
+            <div class="inner">
+              <nav class="nav nav-masthead">
+                <a class="nav-link active" href="#">Home</a>
+                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="#">Contact</a>
+              </nav>
+            </div>
         </div>
       </div>
     </header>
@@ -47,63 +39,104 @@
 
       <section class="jumbotron text-center">
         <div class="container">
-          <h1 class="jumbotron-heading">Album example</h1>
-          <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+          <h1 class="jumbotron-heading"><img src="images/resourceme_black.png" style="height:200px;"></h1>
+          <p class="lead text-muted">Journey of a Refugee. Simplified. </p>
           <p>
-            <a href="profile.php" class="btn btn-primary">Main call to action</a>
-              <!--changing following line to navigate to login.php (instead of href = "#")-->
-            <a href="login.php" class="btn btn-secondary">Login Button</a>
+            <button type=button class="btn btn-primary" data-toggle="modal" data-target="#SignInModal">Sign In</button>
+            <button type=button class="btn btn-secondary" data-toggle="modal" data-target="#RegisterModal">Register</button>
           </p>
         </div>
       </section>
 
-      <div class="album text-muted">
+      <div class="album">
         <div class="container">
 
+        <h1 class="display-4">Welcome to <b>Resource</b>Me</h1>
+        
+            <p>Here is text that describes what this is about. </p>
+            
           <div class="row">
             <div class="card">
-              <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
+              <img src="https://cdn.stocksnap.io/img-thumbs/960w/EB1C4YD25X.jpg" alt="Card image cap">
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
             </div>
             <div class="card">
-              <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
+              <img src="http://www.unhcr.org/thumb1/5576fd6d6.jpg" alt="Card image cap">
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
             </div>
             <div class="card">
-              <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
+              <img src="https://cdn.stocksnap.io/img-thumbs/960w/1LW59GG0WK.jpg" alt="Card image cap">
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
             </div>
 
-            <div class="card">
-              <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-            <div class="card">
-              <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-            <div class="card">
-              <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-
-            <div class="card">
-              <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-            <div class="card">
-              <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-            <div class="card">
-              <img data-src="holder.js/100px280?theme=thumb" alt="Card image cap">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
+            
           </div>
 
         </div>
       </div>
-
+        
+        
+    <!-- Modal -->
+    <div class="modal fade" id="SignInModal" tabindex="-1" role="dialog" aria-labelledby="SignInModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="SignInModalLabel">Sign In</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="login.php" method="post">
+                  <div class="form-group">
+                    <label for="inputUser">Username</label>
+                    <input type="text" class="form-control" id="inputUser" placeholder="Enter username" name="username">
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPassword">Password</label>
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Enter password" name="password">
+                  </div>
+                  <button type="submit" class="btn btn-primary">Sign In</button>
+                </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+        
+        <div class="modal fade" id="RegisterModal" tabindex="-1" role="dialog" aria-labelledby="RegisterModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="RegisterModalLabel">Register</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="" method="post">
+                  <div class="form-group">
+                    <label for="inputUser">Username</label>
+                    <input type="text" class="form-control" id="inputUser" placeholder="Enter username" name="username">
+                      <small class="form-text text-muted">This username will stay with you throughout your journey.</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPassword">Password</label>
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Enter password" name="password">
+                      <small class="form-text text-muted">Make sure that you keep this secure!</small>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Register</button>
+                </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+        
     </main>
 
     <footer class="text-muted">
@@ -111,8 +144,7 @@
         <p class="float-right">
           <a href="#">Back to top</a>
         </p>
-        <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-        <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+        <p><b>Resource</b>Me | BlocHacks 2017 | The Refugee Centre @ Concordia University </p>
       </div>
     </footer>
 
