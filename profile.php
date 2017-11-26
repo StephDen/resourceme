@@ -29,7 +29,7 @@ $php_array = dbconnect::sql_query('SELECT * FROM test');
       
   </head>
     
-  <body onload="register_onload()">
+  <body onload="register_onload()" style="background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);">
     <header class="masthead clearfix">
       <div class="navbar navbar-dark bg-dark">
         <div class="container d-flex justify-content-between">
@@ -56,8 +56,10 @@ $php_array = dbconnect::sql_query('SELECT * FROM test');
             </ol>
         </nav>
             
+        <a style="color: #fff">
         <h1>Welcome!</h1>
         <p>Tell us about yourself. Registering allows you to access resources and services.</p>
+        </a>
             
         </div>
         <div class= "container album" style="padding-top: 3rem; padding-bottom: 3rem; padding-left: 5rem; padding-right: 5rem">
