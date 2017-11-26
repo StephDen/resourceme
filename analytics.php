@@ -746,7 +746,7 @@
     for (var i = 0; i < js_array.length; i++) {
         html+="<tr>";
         for(var j =0; j < 10; j++){
-            html+="<td>"+js_array[i].[j]+"</td>";
+            html+="<td>"+js_array[i][j]+"</td>";
         }
         html+="</tr>";
 
