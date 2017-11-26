@@ -850,7 +850,7 @@ $php_array = dbconnect::sql_query('SELECT * FROM test');
       <select type="text" class="form-control" id="inputMarital" name="maritalStatus">
         <option>Single</option>
           <option>Married</option>
-          <option>Common-law Partner</option>
+          <option>Common-law Partnership</option>
           <option>Widowed</option>
           <option>Divorced</option>
           <option>Seperated</option>
@@ -1465,6 +1465,7 @@ $php_array = dbconnect::sql_query('SELECT * FROM test');
                 <input type="date" class="form-control" id="inputArrival" name="arrivalDate">
         </div>
         </div>
+                <input class="btn btn-primary" type="submit" value="Submit">
                 </form>
           </div>
           <div class="modal-footer">
