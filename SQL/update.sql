@@ -1,9 +1,8 @@
-DECLARE @date_of_birth date;
+DECLARE @date_of_birth char(50);
 DECLARE @sex char(15);
 DECLARE @marital_status char(15);
 DECLARE @religion char(15);
 DECLARE @citizenship char(40);
-DECLARE @photograph char(max);
 DECLARE @place_of_birth char(30);
 DECLARE @occupation char(40);
 DECLARE @education_level char(60);
@@ -20,7 +19,7 @@ DECLARE @country_of_origin char (40);
 DECLARE @city_of_origin char (40);
 DECLARE @address_of_origin char (60);
 DECLARE @special_needs varchar(max);
-DECLARE @depature_date date;
+DECLARE @depature_date char(50);
 
 UPDATE Personal_Info
  SET Date_of_Birth = @date_of_birth,
