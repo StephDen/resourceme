@@ -64,13 +64,13 @@
             </div>
             <div class="form-group col">
                 <label for="inputLastName1">Family Name</label>
-                <input type="text" class="form-control" id="inputLastName1" placeholder = "Smith" name="lastName">
+                <input type="text" class="form-control" id="inputLastName1" placeholder = "Smith" name="lastName_register">
             </div>
             </div>
             <div class = "row">
             <div class="form-group col">
                 <label for="inputSex1">Sex</label>
-                <select type="text" class="form-control" id="inputSex" placeholder = "Smith" name="sex">
+                <select type="text" class="form-control" id="inputSex" placeholder = "Smith" name="sex_register">
                     <option selected></option>
                     <option>Male</option>
                     <option>Female</option>
@@ -79,11 +79,11 @@
             </div>
             <div class="form-group col">
                 <label for="inputBday1">Date of Birth</label>
-                <input type="date" class="form-control" id="inputBday1" name="birthday">
+                <input type="date" class="form-control" id="inputBday1" name="birthday_register">
             </div>
             <div class="form-group col">
                 <label for="inputLastName1">Nationality</label>
-                <select type="text" class="form-control" id="inputLastName1" name="nationality">
+                <select type="text" class="form-control" id="inputLastName1" name="nationality_register">
                     <option selected> </option>
                     <option value="afghan">Afghan</option>
                     <option value="albanian">Albanian</option>
@@ -284,40 +284,40 @@
                 
   <div class="form-group">
     <label for="exampleFormControlFile1">Photograph</label>
-    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="photo">
+    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="photo_register">
   </div>
       </div></div>
             <h3><span class="badge badge-info">Contact Information</span></h3>
             <div class = "row">
             <div class="form-group col">
                 <label for="inputGivenName1">Phone Number</label>
-                <input type="tel" class="form-control" id="inputPhone1" placeholder = "+1 604 123 1234" name="tel">
+                <input type="tel" class="form-control" id="inputPhone1" placeholder = "+1 604 123 1234" name="tel_register">
             </div>
 
             <div class="form-group col">
                 <label for="inputLastName1">Email</label>
-                <input type="email" class="form-control" id="inputEmail1" placeholder = "jsmith@resourceme.tech" name="email">
+                <input type="email" class="form-control" id="inputEmail1" placeholder = "jsmith@resourceme.tech" name="email_register">
             </div>
             </div>
             <div class = "row">
                 <div class="form-group col-md-8">
     <label for="inputAddress">Current Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="address1">
+    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="address1_register">
   </div>
   <div class="form-group col">
     <label for="inputAddress2">Current Unit Number</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Unit 203" name="address2">
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Unit 203" name="address2_register">
   </div>
             </div>
             
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputCity">Current City</label>
-      <input type="text" class="form-control" id="inputCity" name="city">
+      <input type="text" class="form-control" id="inputCity" name="city_register">
     </div>
       <div class="form-group col-md-4">
       <label for="inputState">Current Country</label>
-      <select id="inputState" class="form-control" name="nationality">
+      <select id="inputState" class="form-control" name="nationality2_register">
             <option value="AF">Afghanistan</option>
             <option value="AX">Åland Islands</option>
             <option value="AL">Albania</option>
@@ -571,32 +571,32 @@
     </div>
     <div class="form-group col-md-2">
       <label for="inputZip">Current Postal Code</label>
-      <input type="text" class="form-control" id="inputZip" name="postalCode">
+      <input type="text" class="form-control" id="inputZip" name="postalCode_register">
       </div>
         </div>
             <h3><span class="badge badge-info">Demographics</span></h3>
             <div class= "row">
                 <div class="form-group col">
       <label for="inputZip">Marital Status</label>
-      <input type="text" class="form-control" id="inputMarital" name="maritalStatus">
+      <input type="text" class="form-control" id="inputMarital" name="maritalStatus_register">
       </div>
                 <div class="form-group col">
       <label for="inputZip">Religion</label>
-      <input type="text" class="form-control" id="inputReligion" name="religion">
+      <input type="text" class="form-control" id="inputReligion" name="religion_register">
         </div>
                     <div class="form-group col">
       <label for="inputZip">Ethnic Origin</label>
-      <input type="text" class="form-control" id="inputEthnicity" name="ethnicity">
+      <input type="text" class="form-control" id="inputEthnicity" name="ethnicity_register">
       </div>
             </div>
             <div class="row">
             <div class="form-group col">
       <label for="inputZip">Education Level</label>
-      <input type="text" class="form-control" id="inputEducation" name="education">
+      <input type="text" class="form-control" id="inputEducation" name="education_register">
       </div>
                 <div class="form-group col">
       <label for="inputZip">Last/Current Occupation</label>
-      <input type="text" class="form-control" id="inputOccupation" name="occupation">
+      <input type="text" class="form-control" id="inputOccupation" name="occupation_register">
       </div>
             </div>
             
