@@ -745,8 +745,7 @@
      var js_array = JSON.parse( '<?php echo json_encode($array) ?>');
     
         var table = document.getElementById("dataTable");
-        var counterECCC;
-        counterECCC = 0; 
+        var counterECCC = 0;
         
     var html = "<tbody>";
     for (var i = 0; i < js_array.length; i++) {
