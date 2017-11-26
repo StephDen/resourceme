@@ -88,7 +88,7 @@ class GenerateQuery
         $maritalStatus = htmlspecialchars($_POST["maritalStatusSearch"]);
         $education = htmlspecialchars($_POST["educationSearch"]);
         $countryOG = htmlspecialchars($_POST["countryOGSearch"]);
-        $countryNow = html
+        $countryNow = html;
         $new_sql = '
             SELECT First_Name, Last_Name, Phone, Email, Sex, Marital_Status, Education_Level, Country_of_Birth, Country_of_Origin, Special_Needs
             FROM Personal_Info
