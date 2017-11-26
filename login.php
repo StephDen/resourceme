@@ -11,7 +11,7 @@ require_once ('php/GenerateQuery.php');
 $user = htmlspecialchars($_POST["inputUser"]);
 $pass = htmlspecialchars($_POST["inputPassword"]);
 
-if(GenerateQuery::Login($user,$pass)==true){
+if(GenerateQuery::Login($user,$pass)=='true'){
     setcookie('username',
         $user,
         time()+(86400 * 30)
