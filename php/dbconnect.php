@@ -27,11 +27,11 @@ class dbconnect {
       $i = 0;
       while( $row = sqlsrv_fetch_array( $getResults, SQLSRV_FETCH_NUMERIC) ) {
           $j = 0;
-          while (j < count($row)){
-              $CurrentArray[i][j] = $row[j];
-              j++;
+          while ($j < count($row)){
+              $CurrentArray[$i][$j] = $row[$j];
+              ++$j;
           }
-          i++;
+          $i++;
           //echo $row['Location'].", ".$row['address']."<br />";
       }
 
@@ -43,7 +43,7 @@ class dbconnect {
 //inserting data into sql server without returning anything back
   public static function sql_insert($tsql){
       $conn = sqlsrv_connect(self::$serverName,self::$connectionOptions);
-      $getresults = sqlsrv_query($conn, $tsql);
+      $getResults = sqlsrv_query($conn, $tsql);
       if ($getResults == FALSE){       //checks if database completes query
           echo (sqlsrv_errors());
       }
