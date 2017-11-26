@@ -31,7 +31,7 @@ class tokenID
             }else{
                 //getting server time
                 $time = time();
-                $encrypted_string = encrypt::encrypt_string(encrypt::signtoken($time));
+                $encrypted_string = encrypt::encrypt_string($time);
                 dbconnect::sql_insert(
                     'UPDATE Personal_Info
                         SET Last_Login='.$time.',Token ='.$encrypted_string.'
@@ -62,7 +62,7 @@ class tokenID
             $result = "'abc'";
             //getting server time
             $time = time();
-            $encrypted_string = encrypt::encrypt_string(encrypt::signtoken($time));
+            $encrypted_string = encrypt::encrypt_string($time);
             dbconnect::sql_insert(
                 'UPDATE Personal_Info
                         SET Last_Login='.$time.',Token ='.$encrypted_string.'
