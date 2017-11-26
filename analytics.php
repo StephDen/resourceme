@@ -7,7 +7,7 @@
  */
 
     require_once('php/GenerateQuery.php');
-
+    GenerateQuery::Search();
     $array = GenerateQuery::DisplayQuery();
     
 ?>
