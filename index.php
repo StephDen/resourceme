@@ -23,12 +23,12 @@
     <header class="masthead clearfix">
       <div class="navbar navbar-dark bg-dark">
         <div class="container d-flex justify-content-between">
-            <a href="#" class="navbar-brand"><!--<img src="images/logo.png" style="height:45px;">--><b>Resource</b>Me</a>
+            <a href="/index.php" class="navbar-brand"><!--<img src="images/logo.png" style="height:45px;">--><b>Resource</b>Me</a>
             <div class="inner">
               <nav class="nav nav-masthead">
-                <a class="nav-link active" href="#">Home</a>
-                <a class="nav-link" href="#">Features</a>
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link active" href="/index.php">Home</a>
+                <a class="nav-link" data-toggle="modal" data-target="#SignInModal">Profile</a>
+                <a class="nav-link" href="#">Analytics</a>
               </nav>
             </div>
         </div>
@@ -58,7 +58,7 @@
           <div class="row">
             <div class="card">
               <img src="https://cdn.stocksnap.io/img-thumbs/960w/EB1C4YD25X.jpg" alt="Card image cap">
-              <p class="card-text">Being displaced can happen at any time. That's why you can start your registration process online at your leisure.</p>
+              <p class="card-text">Being displaced can happen at any time. That's why you can start your registration process online at your leisure. Robust and secure, your data is protected.</p>
             </div>
             <div class="card">
               <img src="http://www.unhcr.org/thumb1/5576fd6d6.jpg" alt="Card image cap">
