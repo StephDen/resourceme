@@ -8,8 +8,8 @@
 
 require_once('php/dbconnect.php');
 require_once ('php/GenerateQuery.php');
-$user = htmlspecialchars($_POST["inputUser"]);
-$pass = htmlspecialchars($_POST["inputPassword"]);
+$user = htmlspecialchars($_POST["username"]);
+$pass = htmlspecialchars($_POST["password"]);
 
 if(GenerateQuery::Login($user,$pass)=='true'){
     setcookie('username',
