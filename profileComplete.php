@@ -56,7 +56,7 @@ UPDATE Personal_Info
     Education_Level = '."'".$education."'".',
     Ethnic_Origin = '."'".$ethnicity."'".',
     Last_Updated = '."'".$LastUpdated."'".',
-    Updated_By = '."'".$_COOKIE['Username']."'".',
+    Updated_By = '."'".$_COOKIE['username']."'".',
     Last_Login = '."'".$LastUpdated."'".',
     First_Name = '."'".$givenName."'".',
     Last_Name = '."'".$lastName."'".',
