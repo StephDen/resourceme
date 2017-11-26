@@ -19,7 +19,8 @@ echo 'please log in';
 //echo count($returntext)."<br />";
 //echo $returntext['address'];
 
-GenerateQuery::Create_New_User('Kat','123','ad1354gdfs2f4se3refaefvsfvgafbgsh');
+//test case, works
+//GenerateQuery::Create_New_User('Kat','123','ad1354gdfs2f4se3refaefvsfvgafbgsh');
 
 //$array = dbconnect::sql_query('SELECT * FROM test');
 
