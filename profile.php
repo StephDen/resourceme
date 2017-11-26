@@ -79,7 +79,7 @@ $php_array = GenerateQuery::DisplayQuery();
             <div class = "row">
             <div class="form-group col">
                 <label for="inputSex1">Sex</label>
-                <select type="text" class="form-control" id="inputSex" name="sex">
+                <select type="text" class="form-control" id="inputSex1" name="sex">
                     <option selected></option>
                     <option>Male</option>
                     <option>Female</option>
