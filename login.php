@@ -19,7 +19,7 @@ if(GenerateQuery::Login($user,$pass)=='true'){
     header('Location: profile.php');
 }else{//Login failed
     $_COOKIE['username']='';
-    header('Location: index.php');
+    //header('Location: index.php');
     echo "alert('Incorrect Login!');";
 }
 //Victor Test Code Below
