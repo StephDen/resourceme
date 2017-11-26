@@ -1517,13 +1517,14 @@ $php_array = GenerateQuery::DisplayQuery();
         document.getElementById('inputSex1').value = js_array[2][0];
         document.getElementById('inputMarital').value = js_array[3][0];
         document.getElementById('inputReligion').value = js_array[0][4];
-        document.getElementById('inputGivenName1').value = js_array[0][0];
+        document.getElementById('inputGivenName1').value = js_array[14[0];
         document.getElementById('inputGivenName1').value = js_array[14][0];
         document.getElementById('inputGivenName1').value = js_array[14][0];
         document.getElementById('inputGivenName1').value = js_array[14][0];
         document.getElementById('inputGivenName1').value = js_array[14][0];
         document.getElementById('inputGivenName1').value = js_array[14][0];
             
+            /*
             
             
             1 Date_of_Birth,
@@ -1555,6 +1556,8 @@ $php_array = GenerateQuery::DisplayQuery();
             27Country,
             28City,
             29Street_Address
+            
+            */
         
     }  
     </script>
