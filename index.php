@@ -48,8 +48,8 @@
         </div>
       </section>
 
-      <div class="album">
-        <div class="container" style="background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);">
+      <div class="album" style="background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);">
+        <div class="container">
 
         <h1 class="display-4">Welcome to <b>Resource</b>Me</h1>
         
