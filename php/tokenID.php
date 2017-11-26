@@ -36,7 +36,10 @@ class tokenID
      */
     public static function hardcodecookie(){
         //check if setting cookies are on
-        if(!setcookie('resourcemetoken','SERVERtime',time()+(86400 * 30) )){
+        if(!setcookie('resourcemetoken',
+            encrypt::encrypt_string(encrypt::signtoken('SERVERtime')),
+            time()+(86400 * 30)
+        )){//time = 30days
             echo "<script type='text/javascript'>alert('please enable cookies');</script>";
         }else{
             setcookie('resourcemetoken',
@@ -44,10 +47,8 @@ class tokenID
                 time()+(86400 * 30)
             );//time = 30days
             $_COOKIE['resourcemetoken'] = encrypt::encrypt_string(encrypt::signtoken('SERVERtime'));
-            echo $_COOKIE['resourcemetoken'];
-            echo encrypt::validatetoken(encrypt::decrypt_string($_COOKIE['resourcemetoken']));
+            echo 'encrypted:'.$_COOKIE['resourcemetoken'];
         }
-
     }
 }
 ?>
