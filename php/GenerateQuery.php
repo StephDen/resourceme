@@ -19,5 +19,19 @@ class GenerateQuery
         dbconnect::sql_insert($new_tsql);
     }
 
+    Public Static Function Login($user,$pass){
+        $new_tsql = 'SELECT ID FROM Personal_Info WHERE ID ='."'".$user.'AND'."'".$pass."'".';';
+        $temp_array = dbconnect::sql_query($new_tsql);
+        if ($temp_array[0][0] == null){
+            return 'false';
+        }
+        else{
+            return 'true';
+        }
+    }
+
+
+
+
 
 }
