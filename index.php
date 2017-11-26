@@ -1,12 +1,11 @@
 <?php
-//Section for including the necessary php files
+//REQUIRED FOR ALL FILES///////////
 require_once('php/dbconnect.php');
 require_once('php/encrypt.php');
 require_once ('php/tokenID.php');
-//--------------------------------------------
-//Start of actual code------------------------
 tokenID::hardcodecookie();
 tokenID::authenticate();
+///////////////////////////////////
 ?>
 <html lang="en">
   <head>
