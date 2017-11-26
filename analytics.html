@@ -1,0 +1,90 @@
+<?php
+//Section for including the necessary php files
+require_once('php/dbconnect.php');
+
+//--------------------------------------------
+//Start of actual code------------------------
+
+$php_array = dbconnect::sql_query('SELECT * FROM test');
+
+?>
+
+<html lang="en">
+  <head>
+    <title>ResourceMe</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" href="/images/favicon.png">
+      
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    
+    <link href="/css/spacing.css" rel="stylesheet">
+      
+  </head>
+    
+  <body onload="register_onload()">
+    <header class="masthead clearfix">
+      <div class="navbar navbar-dark bg-dark">
+        <div class="container d-flex justify-content-between">
+            <a href="#" class="navbar-brand"><!--<img src="images/logo.png" style="height:45px;">--><b>Resource</b>Me</a>
+            <div class="inner">
+              <nav class="nav nav-masthead">
+                <a class="nav-link" href="/index.php">Home</a>
+                <a class="nav-link active" href="#">Analytics</a>
+                <a class="nav-link" href="#">Contact</a>
+              </nav>
+            </div>
+        </div>
+      </div>
+    </header>
+
+    <main role="main">
+
+        <div class = "container">
+        
+        <nav aria-label="breadcrumb" role="navigation">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Analytics</li>
+            </ol>
+        </nav>  
+        </div>
+        
+        <div class="container">
+        <h1>The Situation</h1>
+        </div>
+
+    </main>
+
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p><b>Resource</b>Me | BlocHacks 2017 | The Refugee Centre @ Concordia University </p>
+      </div>
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+      
+    
+    <script>
+        function register_onload(){
+        var js_array = JSON.parse( '<?php echo json_encode($php_array) ?>');
+    /*HOW to access array in JS
+    * console.log( js_array['vegetables']['leafy'][0] ); // collard greens
+    */
+        
+        document.getElementById('inputGivenName1').value = js_array[0][0];  
+    }  
+    </script>
+  </body>
+</html>

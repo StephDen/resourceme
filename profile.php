@@ -57,7 +57,7 @@ $php_array = dbconnect::sql_query('SELECT * FROM test');
             
         </div>
         <div class= "container album" style="padding-top: 3rem; padding-bottom: 3rem; padding-left: 5rem; padding-right: 5rem">
-        <form action="registerComplete.php" method="post">
+        <form action="profileComplete.php" method="post">
             <h3><span class="badge badge-info">Personal Information</span></h3>
             <div class = "row">
             <div class="form-group col">

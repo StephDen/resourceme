@@ -14,10 +14,10 @@ class tokenID
     public static function authenticate(){
         //checks if the signed string is valid, if not, redirect to login page
         if(encrypt::validatetoken(encrypt::decrypt_string($_COOKIE['resourcemetoken']))!=true){
-            echo 'invalid token signature';
-            //header('Location: login.php');
+
+            header('Location: login.php');
         }elseif(!isset($_COOKIE['resourcemetoken'])){
-            echo 'nocookie';
+            header('Location: login.php');
         }else{
             /*$result = dbconnect::sql_query(
                 'SELECT ID
@@ -57,12 +57,11 @@ class tokenID
             time()+(86400 * 30)
         )){//time = 30days
             echo "<script type='text/javascript'>alert('please enable cookies');</script>";
-            //header('Location: login.php');
+            header('Location: login.php');
         }else{
             $result = 'abc';
             //getting server time
             $time = time();
-            $encrypted_string1= encrypt::encrypt_string($time);
             $encrypted_string = encrypt::encrypt_string(encrypt::signtoken($time));
             /*dbconnect::sql_insert(
                 'UPDATE Personal_Info
@@ -74,12 +73,8 @@ class tokenID
                 $encrypted_string,
                 time()+(86400 * 30)
             );//time = 30days
-            setcookie('resourcetoken',
-                $encrypted_string,
-                time()+(86400 * 30)
-            );//time = 30days
+
             $_COOKIE['resourcemetoken']=$encrypted_string;
-            $_COOKIE['resourcetoken'] = $encrypted_string1;
         }
     }
 }
