@@ -760,7 +760,7 @@
         table.innerHTML = html;
         counter++;
     }
-        
+        console.log(counter);
         document.getElementById("myCounter").innerHTML = counter.toString();
     </script>
       
