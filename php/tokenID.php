@@ -14,6 +14,7 @@ class tokenID
     public static function authenticate(){
         //checks if the signed string is valid, if not, redirect to login page
         if(!encrypt::validatetoken(encrypt::decrypt_string($_COOKIE['resourcemetoken']))){
+            echo encrypt::decrypt_string($_COOKIE['resourcemetoken']);
             echo 'tokenfail';
             //header('Location: login.php');
         }elseif(!isset($_COOKIE['resourcemetoken'])){
